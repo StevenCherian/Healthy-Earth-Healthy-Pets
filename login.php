@@ -26,9 +26,9 @@
 			<label for="password"><b>Password</b></label>
 			<input type="Password" placeholder="Password" name="Password" required>
 			
-			<div style="display: inline; margin: 3% auto auto auto">
+			<div style="display: inline-grid;margin: 3% auto auto auto; grid-row-gap: 7px;">
 				<button type="submit">Login</button>
-				<button type="button" onclick="signUp()">Don't have an accont? Sign up!</button>
+				<button type="button" onclick="signUp()">Don't have an accuont? Sign up!</button>
 			</div>
 	 	</div>
 	 	
@@ -51,8 +51,8 @@
 			<label for="password"><b>Password:</b></label>
 			<input type="text" placeholder="Password" name="Password" required>
 			
-			<div style="display: inline; margin: 3% auto auto auto">
-				<button type="submit">Login</button>
+			<div style="display: inline-grid;margin: 3% auto auto auto;grid-row-gap: 7px;">
+				<button type="submit">Create Account</button>
 				<button type="button" onclick="login()">Go back</button>
 			</div>
 		</div>
