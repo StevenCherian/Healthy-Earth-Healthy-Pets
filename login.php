@@ -6,6 +6,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	 	<link rel="stylesheet" href="styles.css">
 	 	<title>Healthy Earth, Healthy Pets</title>
+	 	<style>
+        body {
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
 	
 	</head>
 	
