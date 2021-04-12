@@ -28,7 +28,7 @@
 			
 			<div style="display: inline-grid;margin: 3% auto auto auto; grid-row-gap: 7px;">
 				<button type="submit">Login</button>
-				<button type="button" onclick="signUp()">Don't have an accuont? Sign up!</button>
+				<button type="button" onclick="signUp()">Don't have an account? Sign up!</button>
 			</div>
 	 	</div>
 	 	
