@@ -34,9 +34,9 @@
     	</div>
     	
     	<form method="post">
-    		<h2><strong>Log in to your account</strong></h2>
     	 
     		<div class ="login" id="log">
+    			<h2><strong>Log in to your account</strong></h2>
     			
     			<label for="Email"><b>Email</b></label>
     			<input type="Email" placeholder="Email" name="Email" required>
@@ -53,9 +53,9 @@
     	</form>
     	
     	<form method="post">
-    		<h2><strong>Create an account</strong></h2>
     	
     		<div class="sign_up" id="sign-up">
+    			<h2><strong>Create an account</strong></h2>
     			
     			<label for="first_name"><b>First Name:</b></label>
     			<input type="text" placeholder="First Name" name="first_name" required>
