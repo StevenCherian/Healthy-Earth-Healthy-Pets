@@ -12,6 +12,7 @@
                 animation-iteration-count: 1;
                 animation-fill-mode: forwards;
             }
+            
             @keyframes fadeInAnimation {
                 0% {
                     opacity: 0;
@@ -19,6 +20,13 @@
                 100% {
                     opacity: 1;
                 }
+            }
+            
+            .header {
+              padding: 3px 10px;
+              border-radius: 20px;
+              background: #555;
+              color: #f1f1f1;
             }
         </style>
 	</head>
