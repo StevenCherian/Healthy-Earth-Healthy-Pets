@@ -18,8 +18,7 @@
 	<form method="post">
 	 
 		<div class ="login" id="log">
-			<h2><strong>Healthy Earth,</strong></h2>
-			<h2><strong>Healthy Pets</strong></h2>
+			<h2><strong>Healthy Earth,<br>Healthy Pets</strong></h2>
 			
 			<label for="Email"><b>Email</b></label>
 			<input type="Email" placeholder="Email" name="Email" required>
