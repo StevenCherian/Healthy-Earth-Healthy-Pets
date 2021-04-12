@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-body {
-	margin: 2%;
-	margin-block: auto;
-    font-family: sans-serif;
-}
-
 button {
   background-color: #5e5e5e;
   color: white;

@@ -8,6 +8,9 @@
 	 	
 	 	<style>
             body {
+                margin: 1%;
+                margin-block: auto;
+                font-family: sans-serif;
                 animation: fadeInAnimation ease 3s;
                 animation-iteration-count: 1;
                 animation-fill-mode: forwards;
@@ -25,8 +28,8 @@
             .header {
               padding: 3px 10px;
               border-radius: 20px;
-              background: #555;
-              color: #f1f1f1;
+              background: #5e5e5e;
+              color: #f2f2f2;
             }
         </style>
 	</head>
