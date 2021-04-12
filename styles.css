@@ -26,7 +26,7 @@ input {
 .login {
 	padding: 25px;
 	border-radius: 20px;
-	width: 35%;
+	width: inherit;
 	margin: auto;
 	display: grid;
 	background-color: #f2f2f2;
