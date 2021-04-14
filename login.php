@@ -7,30 +7,6 @@
 	 	<title>Healthy Earth, Healthy Pets</title>
 	 	
 	 	<style>
-            body {
-                margin: 1%;
-                margin-block: auto;
-                font-family: sans-serif;
-                animation: fadeInAnimation ease .5s;
-                animation-iteration-count: 1;
-                animation-fill-mode: forwards;
-            }
-            
-            @keyframes fadeInAnimation {
-                0% {
-                    opacity: 0;
-                }
-                100% {
-                    opacity: 1;
-                }
-            }
-            
-            .header {
-              padding: 3px 10px;
-              border-radius: 20px;
-              background: #5e5e5e;
-              color: #f2f2f2;
-            }
         </style>
 	</head>
 	
@@ -44,8 +20,7 @@
       		<h2>Healthy Earth, Healthy Pets</h2>
     	</div>
     	
-    	<form method="post">
-    	 
+    	<form method="post">	 
     		<div class ="login" id="log">
     			<h2><strong>Log in to your account</strong></h2>
     			
@@ -60,11 +35,9 @@
     				<button type="button" onclick="signUp()">Don't have an account? Sign up!</button>
     			</div>
     	 	</div>
-    	 	
     	</form>
     	
     	<form method="post">
-    	
     		<div class="sign_up" id="sign-up">
     			<h2><strong>Create an account</strong></h2>
     			
@@ -73,6 +46,9 @@
     			
     			<label for="last_name"><b>Last Name:</b></label>
     			<input type="text" placeholder="Last Name" name="last_name" required>
+    			
+				<label for="username"><b>Username::</b></label>
+    			<input type="text" placeholder="Username" name="Username" required>
     			
     			<label for="email"><b>Email:</b></label>
     			<input type="text" placeholder="Email" name="Email" required>
@@ -85,7 +61,6 @@
     				<button type="button" onclick="login()">Go back</button>
     			</div>
     		</div>
-    	
     	</form>
     	
     	<script>
