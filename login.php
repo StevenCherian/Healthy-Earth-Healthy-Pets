@@ -6,26 +6,25 @@
 	 	<link rel="stylesheet" href="styles.css">
 	 	<title>Healthy Earth, Healthy Pets</title>
 	 	
-	 	<style>
-    	 	body {
-                margin: 1%;
-                margin-block: auto;
-                font-family: sans-serif;
-                animation: fadeInAnimation ease .6s;
-                animation-iteration-count: 1;
-                animation-fill-mode: forwards;
-            }
+<!-- 	 	<style> -->
+/*     	 	body { */
+/*                 margin: 1%; */
+/*                 margin-block: auto; */
+/*                 font-family: sans-serif; */
+/*                 animation: fadeInAnimation ease .6s; */
+/*                 animation-iteration-count: 1; */
+/*                 animation-fill-mode: forwards; */
+/*             } */
 
-            @keyframes fadeInAnimation {
-                0% {
-                    opacity: 0;
-                }
-                100% {
-                    opacity: 1;
-                }
-            }
+/*             @keyframes fadeInAnimation { */
+/*                 0% { */
+/*                     opacity: 0; */
+/*                 } */
+/*                 100% { */
+/*                     opacity: 1; */
+/*                 } */
+/*             } */
 	 	 
-        </style>
 	</head>
 	
 	<?php 

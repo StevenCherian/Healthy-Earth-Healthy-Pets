@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+body { 
+	margin: 1%; 
+	margin-block: auto; 
+	font-family: sans-serif; 
+}
 
 .myheader {
   padding: 3px 10px;
