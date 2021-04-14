@@ -6,7 +6,7 @@
 	 	<link rel="stylesheet" href="styles.css">
 	 	<title>Healthy Earth, Healthy Pets</title>
 	 	
-<!-- 	 	<style> -->
+	 	<style>
 /*     	 	body { */
 /*                 margin: 1%; */
 /*                 margin-block: auto; */
@@ -25,6 +25,7 @@
 /*                 } */
 /*             } */
 	 	 
+        </style>
 	</head>
 	
 	<?php 

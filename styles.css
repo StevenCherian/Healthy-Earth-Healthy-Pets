@@ -1,18 +1,5 @@
 @charset "UTF-8";
 
-body { 
-	margin: 1%; 
-	margin-block: auto; 
-	font-family: sans-serif; 
-}
-
-.myheader {
-  padding: 3px 10px;
-  border-radius: 20px;
-  background: #5e5e5e;
-  color: #f2f2f2;
-}
-
 button {
   background-color: #5e5e5e;
   color: white;
@@ -49,4 +36,17 @@ input {
 	display: none;
 	background-color: #f2f2f2;
 	color: #000000;
+}
+
+body { 
+	margin: 1%; 
+	margin-block: auto; 
+	font-family: sans-serif; 
+}
+
+.myheader {
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: #5e5e5e;
+  color: #f2f2f2;
 }
