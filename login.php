@@ -34,7 +34,7 @@
 	
 	<body>
 	
-    	<div class="header" id="myHeader">
+    	<div class="myheader" id="myHeader">
       		<h2>Healthy Earth, Healthy Pets</h2>
     	</div>
     	
