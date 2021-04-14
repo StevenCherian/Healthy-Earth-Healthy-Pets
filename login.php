@@ -7,23 +7,31 @@
 	 	<title>Healthy Earth, Healthy Pets</title>
 	 	
 	 	<style>
-/*     	 	body { */
-/*                 margin: 1%; */
-/*                 margin-block: auto; */
-/*                 font-family: sans-serif; */
-/*                 animation: fadeInAnimation ease .6s; */
-/*                 animation-iteration-count: 1; */
-/*                 animation-fill-mode: forwards; */
-/*             } */
+    	 	body {
+                margin: 1%;
+                margin-block: auto;
+                font-family: sans-serif;
+                animation: fadeInAnimation ease .6s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+            }
 
-/*             @keyframes fadeInAnimation { */
-/*                 0% { */
-/*                     opacity: 0; */
-/*                 } */
-/*                 100% { */
-/*                     opacity: 1; */
-/*                 } */
-/*             } */
+            @keyframes fadeInAnimation {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+            
+            .myheader {
+              padding: 3px 10px;
+              border-radius: 20px;
+              background: #5e5e5e;
+              color: #f2f2f2;
+            }
+            
 	 	 
         </style>
 	</head>
