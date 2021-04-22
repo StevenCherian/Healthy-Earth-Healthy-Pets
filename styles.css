@@ -42,7 +42,7 @@ input {
 	width: 75%;
 	max-width: 350px;
 	margin: auto;
-	display: grid;
+	display: none;
 	overflow: auto;
 	background-color: #f2f2f2;
 	color: #000000;
