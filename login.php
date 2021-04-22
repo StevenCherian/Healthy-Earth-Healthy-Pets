@@ -75,7 +75,7 @@
         			<label for="last_name"><b>Last Name:</b></label>
         			<input type="text" placeholder="Last Name" name="last_name" required>
         			
-    				<label for="username"><b>Username::</b></label>
+    				<label for="username"><b>Username:</b></label>
         			<input type="text" placeholder="Username" name="Username" required>
         			
         			<label for="email"><b>Email:</b></label>
