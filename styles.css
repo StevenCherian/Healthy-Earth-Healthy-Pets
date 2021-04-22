@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+.login-container {
+	margin: 1%;
+}
+
 button {
   background-color: #5e5e5e;
   color: white;
