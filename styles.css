@@ -28,9 +28,11 @@ input {
 .login {
 	padding: 25px;
 	border-radius: 20px;
-	width: inherit;
+	width: 75%;
+	max-width: 350px;
 	margin: auto;
 	display: grid;
+	overflow: auto;
 	background-color: #f2f2f2;
 	color: #000000;
 }
@@ -38,9 +40,11 @@ input {
 .sign_up {
 	padding: 25px;
 	border-radius: 20px;
-	width: inherit;
+	width: 75%;
+	max-width: 350px;
 	margin: auto;
-	display: none;
+	display: grid;
+	overflow: auto;
 	background-color: #f2f2f2;
 	color: #000000;
 }
