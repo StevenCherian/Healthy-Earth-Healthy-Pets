@@ -26,7 +26,7 @@
             }
             
             .myheader {
-              padding: 3px 10px;
+              padding: 1px 10px;
               border-radius: 0px;
               width: 100%;
               background: #404040;
@@ -43,7 +43,7 @@
 	
 	<body>
 	
-    	<div class="myheader" id="myHeader">
+    	<div class="myheader">
       		<h2>Healthy Earth, Healthy Pets</h2>
     	</div>
     	
