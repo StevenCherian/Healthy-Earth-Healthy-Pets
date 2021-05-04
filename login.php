@@ -26,11 +26,11 @@
             }
             
             .myheader {
-              padding: 1px 10px;
-              border-radius: 0px;
+              padding: 1px;
               width: 100%;
               background: #404040;
               color: #f2f2f2;
+              text-align: center;
             }
             
 	 	 
