@@ -29,8 +29,9 @@
               color: #f2f2f2;
               font-size: 12px;
               text-align: center;
-            }   
-           
+            }
+            
+
             .electricityinfo-container {
             	margin: 1%;
                 width: 80%;
@@ -48,7 +49,8 @@
             	overflow: auto;
             	background-color: #f2f2f2;
             	color: #000000;
-            }   
+            }
+            
 	 	 
         </style>
 	</head>
@@ -66,10 +68,10 @@
     	<div class="electricityinfo-container">
         	<form method="post">	 
         		<div class ="powerinfo" id="log">
-        			<h3><strong>Enter your Solar Power Information</strong></h3>
+        			<h3><strong>Enter your Wind Power Information</strong></h3>
         			
-        			<label for="SolarGrid#"><b>Solar Grid #:</b></label>
-        			<input type="SolarGrid#" placeholder="Solar Grid #" name="Solar Grid #" required>
+        			<label for="TurbineGrid#"><b>Turbine Grid #:</b></label>
+        			<input type="TurbineGrid#" placeholder="Turbine Grid #" name="Turbine Grid #" required>
         			
         			<label for="Grid Energy Consumption"><b>Grid Energy Consumption:</b></label>
         			<input type="Grid Energy Consumption" placeholder="Grid Energy Consumption" name="Grid Energy Consumption" required>
