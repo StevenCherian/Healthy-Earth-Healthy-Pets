@@ -29,14 +29,21 @@
               color: #f2f2f2;
               font-size: 12px;
               text-align: center;
-            }      
+            }   
+            
+            .electricityinfo-container {
+            	margin: 1%;
+                width: 80%;
+            	margin-left: auto;
+            	margin-right: auto;
+            }   
 	 	 
         </style>
 	</head>
 	
 	<?php 
-// 	require_once('connection.php');
-// 	?>
+	require_once('connection.php');
+	?>
 	
 	<body>
 	
