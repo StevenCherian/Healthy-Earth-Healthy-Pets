@@ -51,10 +51,10 @@
         			<h2><strong>Log in to your account</strong></h2>
         			
         			<label for="Email"><b>Email</b></label>
-        			<input type="Email" placeholder="Email" name="Email" required>
+        			<input type="Email" placeholder="Email" name="Email_Address" required>
         			
         			<label for="password"><b>Password</b></label>
-        			<input type="Password" placeholder="Password" name="Password" required>
+        			<input type="Password" placeholder="Password" name="User_Password" required>
         			
         			<div style="display: inline-grid;margin: 3% auto auto auto; grid-row-gap: 7px;">
         				<button type="submit">Login</button>
@@ -68,10 +68,10 @@
         			<h2><strong>Create an account</strong></h2>
         			
         			<label for="first_name"><b>First Name:</b></label>
-        			<input type="text" placeholder="First Name" name="first_name" required>
+        			<input type="text" placeholder="First Name" name="First_Name" required>
         			
         			<label for="last_name"><b>Last Name:</b></label>
-        			<input type="text" placeholder="Last Name" name="last_name" required>
+        			<input type="text" placeholder="Last Name" name="Last_Name" required>
         			
     				<label for="username"><b>Username:</b></label>
         			<input type="text" placeholder="Username" name="Username" required>

@@ -95,7 +95,7 @@
         <div class="header">
           <a href="#default" class="logo">Healthy Earth, Healthy Pets</a>
           <div class="header-right">
-            <a class="active" href="#home">Home</a>
+            <a class="active" href="main.php">Home</a>
             <a href="contact.php">Contact</a>
             <a href="myaccount.php">My Account</a>
           </div>
@@ -109,14 +109,12 @@
                     
                 <h4>We aim to provide quality care to your pets!<br>Contact us or create an account and schedule an appointment to get started.</h4>       			
         			
-        		<div style="display: inherit; margin: 3% auto auto auto;">
-        			<button type="submit">Schedule an appointment</button>
-        	 	</div>
-        	 	
-        	 	<div style="display: inherit; margin: 1% auto auto auto;">
-        			<button type="submit">Create an account</button>
-        	 	</div>
+    		    <div style="display: inline-grid;margin: 3% auto auto auto; grid-row-gap: 7px;">
+    				<button type="submit">Schedule an appointment</button>
+    				<button type="submit">Create an account</button>
+    			</div>
         	</form>
 		</div>
+		
 	</body>
 </html>
