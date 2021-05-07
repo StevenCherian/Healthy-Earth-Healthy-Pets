@@ -77,10 +77,10 @@
         			<input type="text" placeholder="Username" name="Username" required>
         			
         			<label for="email"><b>Email:</b></label>
-        			<input type="text" placeholder="Email" name="Email" required>
+        			<input type="text" placeholder="Email" name="Email_Address" required>
         			
         			<label for="password"><b>Password:</b></label>
-        			<input type="text" placeholder="Password" name="Password" required>
+        			<input type="text" placeholder="Password" name="User_Password" required>
         			
         			<div style="display: inline-grid;margin: 3% auto auto auto;grid-row-gap: 7px;">
         				<button type="submit">Create Account</button>
