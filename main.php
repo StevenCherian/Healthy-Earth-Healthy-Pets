@@ -112,6 +112,10 @@
         		<div style="display: inherit; margin: 3% auto auto auto; grid-row-gap: 7px;">
         			<button type="submit">Schedule an appointment</button>
         	 	</div>
+        	 	
+        	 	<div style="display: inherit; margin: 2% auto auto auto;">
+        			<button type="submit">Create an account</button>
+        	 	</div>
         	</form>
 		</div>
 	</body>
