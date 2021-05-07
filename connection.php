@@ -25,22 +25,22 @@ session_start();
 if (!isset($_SESSION['user_ID']))
 {
     // If the page is receiving the email and password from the login form then verify the login data
-    if (isset($_POST['email']) && isset($_POST['password']))
+    if (isset($_POST['Email_Address']) && isset($_POST['User_Password']))
     {
-        $stmt = $conn->prepare("SELECT ID, password FROM user WHERE email=:email");
-        $stmt->bindValue(':email', $_POST['email']);
+        $stmt = $conn->prepare("SELECT UserID, User_Password FROM Users WHERE Email_Address=:Email_Address");
+        $stmt->bindValue(':Email_Address', $_POST['Email_Address']);
         $stmt->execute();
         
         $queryResult = $stmt->fetch();
         
         // Verify password submitted by the user with the hash stored in the database
-        if(!empty($queryResult) && password_verify($_POST["password"], $queryResult['password']))
+        if(!empty($queryResult) && password_verify($_POST["User_Password"], $queryResult['User_Password']))
         {
             // Create session variable
             $_SESSION['user_ID'] = $queryResult['ID'];
             
             // Redirect to URL
-            header("Location: http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
+            header("Location: main.php");
         } else {
             // Password mismatch
             require('login.php');
