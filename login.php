@@ -14,7 +14,7 @@
                 animation: fadeInAnimation ease .6s;
                 animation-iteration-count: 1;
                 animation-fill-mode: forwards;
-                background: #1E9963;
+                background: #2a9d8f;
             }
 
             @keyframes fadeInAnimation {
