@@ -50,7 +50,7 @@ if (!isset($_SESSION['user_ID']))
     else
     {
         // Show login page
-        require('myaccount.php');
+        require('login.php');
         exit();
     }
 }
