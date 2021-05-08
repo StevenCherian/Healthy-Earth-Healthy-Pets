@@ -36,19 +36,19 @@ if (!isset($_SESSION['user_ID']))
         // Verify password submitted by the user with the hash stored in the database
         if(!empty($queryResult) && password_verify($_POST["User_Password"], $queryResult['User_Password']))
         {
-            if($queryResult['Veterinarian'] == 1) {
+            if($queryResult['User_Type'] == "Veterinarian") {
+                $_SESSION['user_ID'] = $queryResult['UserID'];
+                
+                // Redirect to URL
+                header("Location: admin_main.php");
+                
+            } else if($queryResult['User_Type'] == "SolarPowerComp") {
                 $_SESSION['user_ID'] = $queryResult['UserID'];
                 
                 // Redirect to URL
                 header("Location: solarpowerinfo.php");
                 
-            } else if($queryResult['SolarPowerComp'] == 1) {
-                $_SESSION['user_ID'] = $queryResult['UserID'];
-                
-                // Redirect to URL
-                header("Location: solarpowerinfo.php");
-                
-            } else if($queryResult['WindPowerComp'] == 1) {
+            } else if($queryResult['User_Type'] == "WindPowerComp") {
                 $_SESSION['user_ID'] = $queryResult['UserID'];
                 
                 // Redirect to URL
