@@ -36,6 +36,7 @@ if (!isset($_SESSION['user_ID']))
         // Verify password submitted by the user with the hash stored in the database
         if(!empty($queryResult) && password_verify($_POST["User_Password"], $queryResult['User_Password']))
         {
+            printf("%s\n", $queryResult['User_Type'] );
             if($queryResult['User_Type'] == "Veterinarian") {
                 $_SESSION['user_ID'] = $queryResult['UserID'];
                 
