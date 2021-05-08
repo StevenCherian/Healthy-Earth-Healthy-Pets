@@ -52,6 +52,7 @@
 
             .header-right {
               float: right;
+              padding-right: 12px;
             }       
 
             .main-container {
