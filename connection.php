@@ -37,20 +37,20 @@ if (!isset($_SESSION['user_ID']))
         if(!empty($queryResult) && password_verify($_POST["User_Password"], $queryResult['User_Password']))
         {
             // Create session variable
-            $_SESSION['user_ID'] = $queryResult['UserID'];
+            $_SESSION['user_ID'] = $queryResult['ID'];
             
             // Redirect to URL
             header("Location: main.php");
         } else {
             // Password mismatch
-            require('contact.php');
+            require('login.php');
             exit();
         }
     }
     else
     {
         // Show login page
-        require('myaccount.php');
+        require('login.php');
         exit();
     }
 }
