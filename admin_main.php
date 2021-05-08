@@ -74,7 +74,7 @@
           <div class="header-right">
             <a href="main.php">Home</a>
             <a href="contact.php">Contact</a>
-            <a class="active" a href="myaccount.php">My Account</a>
+            <a class="active" href="myaccount.php">My Account</a>
           </div>
         </div>
     	

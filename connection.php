@@ -44,7 +44,7 @@ if (!isset($_SESSION['user_ID']))
 //            }
         } else {
             // Password mismatch
-            require('login.php');
+            require('contact.php');
             exit();
         }
     }
