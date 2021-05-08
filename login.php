@@ -45,7 +45,7 @@
     	</div>
     	
     	<div class="login-container">
-        	<form action="connection.php" method="post">	 
+        	<form method="post">	 
         		<div class ="login" id="log">
         			<h2><strong>Log in to your account</strong></h2>
         			
