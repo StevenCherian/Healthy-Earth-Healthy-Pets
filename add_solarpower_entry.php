@@ -14,7 +14,7 @@ try {
     $stmt->bindValue(':MonthYearName', $_POST["MonthYearName"]);
     $stmt->execute();
     
-    header("solarpowerinfo.php");
+    header("Location: solarpowerinfo.php");
     
 }catch(PDOException $e) {
     echo($e->getMessage());
