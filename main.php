@@ -93,7 +93,7 @@
 	<body>
 	
         <div class="header">
-          <a href="#default" class="logo">Healthy Earth, Healthy Pets</a>
+          <a href="main.php" class="logo">Healthy Earth, Healthy Pets</a>
           <div class="header-right">
             <a class="active" href="main.php">Home</a>
             <a href="contact.php">Contact</a>
