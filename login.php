@@ -35,9 +35,7 @@
         </style>
 	</head>
 	
-	<?php 
-	require_once('connection.php');
-	?>
+	<?php require_once('connection.php'); ?>
 	
 	<body>
 	
@@ -46,7 +44,7 @@
     	</div>
     	
     	<div class="login-container">
-        	<form method="post">	 
+        	<form action="connection.php" method="post">	 
         		<div class ="login" id="log">
         			<h2><strong>Log in to your account</strong></h2>
         			
@@ -77,10 +75,10 @@
         			<input type="text" placeholder="Username" name="Username" required>
         			
         			<label for="email"><b>Email:</b></label>
-        			<input type="text" placeholder="Email" name="Email_Address" required>
+        			<input type="text" placeholder="Email" name="Email_addr" required>
         			
         			<label for="password"><b>Password:</b></label>
-        			<input type="text" placeholder="Password" name="User_Password" required>
+        			<input type="text" placeholder="Password" name="Password" required>
         			
         			<div style="display: inline-grid;margin: 3% auto auto auto;grid-row-gap: 7px;">
         				<button type="submit">Create Account</button>

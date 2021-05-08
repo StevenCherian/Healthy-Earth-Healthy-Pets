@@ -43,7 +43,7 @@ if (!isset($_SESSION['user_ID']))
             header("Location: main.php");
         } else {
             // Password mismatch
-            require('contact.php');
+            require('login.php');
             exit();
         }
     }
