@@ -64,20 +64,20 @@
     	</div>
     	
     	<div class="electricityinfo-container">
-        	<form method="post">	 
+        	<form action="add_solarpower_entry.php" method="post">	 
         		<div class ="powerinfo" id="log">
         			<h3><strong>Enter your Solar Power Information</strong></h3>
         			
         			<label for="SolarGrid#"><b>Solar Grid #:</b></label>
-        			<input type="SolarGrid#" placeholder="Solar Grid #" name="Solar Grid #" required>
+        			<input type="SolarGrid#" placeholder="Solar Grid #" name="Solar_Grid_ID" required>
         			
         			<label for="Grid Energy Consumption"><b>Grid Energy Consumption:</b></label>
-        			<input type="Grid Energy Consumption" placeholder="Grid Energy Consumption" name="Grid Energy Consumption" required>
+        			<input type="Grid Energy Consumption" placeholder="Grid Energy Consumption" name="Grid_Energy_Consumption" required>
                     
                     <label for="Month"><b>For the month of:</b></label>
-        			<input type="Month" placeholder="Month" name="Month" required>
+        			<input type="Month" placeholder="Month" name="MonthYearName" required>
         			
-        			<div style="display: inline-grid;margin: 3% auto auto auto; grid-row-gap: 7px;">
+        			<div style="display: inline-grid;margin: 3% auto auto auto;">
         				<button type="submit">Submit</button>
         			</div>
         			

@@ -66,20 +66,20 @@
     	</div>
     	
     	<div class="electricityinfo-container">
-        	<form method="post">	 
+        	<form action="add_windpower_entry.php" method="post">	 
         		<div class ="powerinfo" id="log">
         			<h3><strong>Enter your Wind Power Information</strong></h3>
         			
         			<label for="TurbineGrid#"><b>Turbine Grid #:</b></label>
-        			<input type="TurbineGrid#" placeholder="Turbine Grid #" name="Turbine Grid #" required>
+        			<input type="TurbineGrid#" placeholder="Turbine Grid #" name="Turbine_Grid_ID" required>
         			
         			<label for="Grid Energy Consumption"><b>Grid Energy Consumption:</b></label>
-        			<input type="Grid Energy Consumption" placeholder="Grid Energy Consumption" name="Grid Energy Consumption" required>
+        			<input type="Grid Energy Consumption" placeholder="Grid Energy Consumption" name="Turbine_Energy_Consumption" required>
                     
                     <label for="Month"><b>For the month of:</b></label>
-        			<input type="Month" placeholder="Month" name="Month" required>
+        			<input type="Month" placeholder="Month" name="MonthYearName" required>
         			
-        			<div style="display: inline-grid;margin: 3% auto auto auto; grid-row-gap: 7px;">
+        			<div style="display: inline-grid;margin: 3% auto auto auto;">
         				<button type="submit">Submit</button>
         			</div>
         			
