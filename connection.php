@@ -40,7 +40,7 @@ if (!isset($_SESSION['user_ID']))
             $_SESSION['user_ID'] = $queryResult['UserID'];
             
             // Redirect to URL
-            header("Location: main.php");
+            header("Location: .main.php");
         } else {
             // Password mismatch
             require('login.php');
