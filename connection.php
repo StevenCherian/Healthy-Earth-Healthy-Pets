@@ -27,7 +27,7 @@ if (!isset($_SESSION['user_ID']))
     // If the page is receiving the email and password from the login form then verify the login data
     if (isset($_POST['Email_Address']) && isset($_POST['User_Password']))
     {
-        $stmt = $conn->prepare("SELECT UserID, User_Password FROM Users WHERE Email_Address=:Email_Address");
+        $stmt = $conn->prepare("SELECT UserID, User_Type, User_Password FROM Users WHERE Email_Address=:Email_Address");
         $stmt->bindValue(':Email_Address', $_POST['Email_Address']);
         $stmt->execute();
         
@@ -36,11 +36,30 @@ if (!isset($_SESSION['user_ID']))
         // Verify password submitted by the user with the hash stored in the database
         if(!empty($queryResult) && password_verify($_POST["User_Password"], $queryResult['User_Password']))
         {
-            // Create session variable
-            $_SESSION['user_ID'] = $queryResult['UserID'];
-            
-            // Redirect to URL
-            header("Location: main.php");
+            if($queryResult['Veterinarian'] == 1) {
+                $_SESSION['user_ID'] = $queryResult['UserID'];
+                
+                // Redirect to URL
+                header("Location: solarpowerinfo.php");
+                
+            } else if($queryResult['SolarPowerComp'] == 1) {
+                $_SESSION['user_ID'] = $queryResult['UserID'];
+                
+                // Redirect to URL
+                header("Location: solarpowerinfo.php");
+                
+            } else if($queryResult['WindPowerComp'] == 1) {
+                $_SESSION['user_ID'] = $queryResult['UserID'];
+                
+                // Redirect to URL
+                header("Location: windpowerinfo.php");
+            } else {
+                // Create session variable
+                $_SESSION['user_ID'] = $queryResult['UserID'];
+                
+                // Redirect to URL
+                header("Location: main.php");
+            }
         } else {
             // Password mismatch
             require('login.php');
