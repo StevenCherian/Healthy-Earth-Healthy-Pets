@@ -36,15 +36,14 @@ if (!isset($_SESSION['user_ID']))
         // Verify password submitted by the user with the hash stored in the database
         if(!empty($queryResult) && password_verify($_POST["User_Password"], $queryResult['User_Password']))
         {
-                // Create session variable
-                $_SESSION['user_ID'] = $queryResult['UserID'];
-                
-                // Redirect to URL
-                header("Location: main.php");
-//            }
+            // Create session variable
+            $_SESSION['user_ID'] = $queryResult['UserID'];
+            
+            // Redirect to URL
+            header("Location: main.php");
         } else {
             // Password mismatch
-            require('contact.php');
+            require('login.php');
             exit();
         }
     }
