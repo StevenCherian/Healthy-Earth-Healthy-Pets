@@ -42,13 +42,17 @@ if (!isset($_SESSION['user_ID']))
                 // Redirect to URL
                 header("Location: admin_main.php");
                 
-            } else if($queryResult['User_Type'] == "SolarPowerComp") {
+            }
+            
+            if($queryResult['User_Type'] == "SolarPowerComp") {
                 $_SESSION['user_ID'] = $queryResult['UserID'];
                 
                 // Redirect to URL
                 header("Location: solarpowerinfo.php");
                 
-            } else if($queryResult['User_Type'] == "WindPowerComp") {
+            }
+            
+            if($queryResult['User_Type'] == "WindPowerComp") {
                 $_SESSION['user_ID'] = $queryResult['UserID'];
                 
                 // Redirect to URL
