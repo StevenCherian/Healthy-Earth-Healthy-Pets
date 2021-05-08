@@ -2,7 +2,6 @@
 require_once ('connection.php');
 
 try {
-    global $conn;
     
     $sqlQuery = "INSERT INTO Wind_Power
                      (Turbine_Grid_ID, Turbine_Energy_Consumption, MonthYearName)
