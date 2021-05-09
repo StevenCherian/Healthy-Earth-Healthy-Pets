@@ -44,7 +44,7 @@ if (!isset($_SESSION['user_ID']))
                     // Redirect to URL
                     header("Location: admin_main.php");
             }
-            
+            die;
             if($queryResult['UserID'] = "102") {
                 $_SESSION['user_ID'] = $queryResult['UserID'];
     
