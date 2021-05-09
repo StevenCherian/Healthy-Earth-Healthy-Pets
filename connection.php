@@ -39,6 +39,8 @@ if (!isset($_SESSION['user_ID']))
             foreach ($queryResult as $value){
                 echo $value;
             }
+            
+            die;
             if($queryResult['User_Type'] = "Veterinarian") {
                 $_SESSION['user_ID'] = $queryResult['UserID'];
     
