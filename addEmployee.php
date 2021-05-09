@@ -145,6 +145,34 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 } else {
     
     try {
+        
+        $stmt = $conn->prepare("INSERT INTO Users (User_Type, First_Name, Last_Name, Email_Address, User_Password)
+                                VALUES (:User_Type, :First_Name, :Last_Name, :Email_Address, :User_Password)");
+        
+        if($_POST['User_Type'] != -1) {
+            $stmt->bindValue(':User_Type', $_POST['User_Type']);
+        } else {
+            $stmt->bindValue(':User_Type', null, PDO::PARAM_INT);
+        }
+        $stmt->bindValue(':First_Name', $_POST['First_Name']);
+        $stmt->bindValue(':Last_Name', $_POST['Last_Name']);
+        $stmt->bindValue(':Email_Address', $_POST['Email_Address']);
+        $stmt->bindValue(':User_Password', $_POST['User_Password']);
+        
+        if($_POST['User_Type'] != -1) {
+            $stmt->bindValue(':User_Type', $_POST['User_Type']);
+        } else {
+            $stmt->bindValue(':User_Type', null, PDO::PARAM_INT);
+        }
+        
+        $stmt->execute();
+        
+    } catch (PDOException $e) {
+        echo "Error: " . $e.getMessage();
+        die();
+    }
+    
+    try {
         $stmt = $conn->prepare("INSERT INTO Employee (Employee_Type, First_Name, Last_Name, Email_Address, Home_Address, Phone_Number, Weekly_Hours,
                                 Clock_In_Time, Clock_Out_Time, Salary, ID)
                                 VALUES (:User_Type, :First_Name, :Last_Name, :Email_Address, :Home_Address, :Phone_Number, :Weekly_Hours,
@@ -179,33 +207,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
         die();
     }
     
-    try {
-        
-        $stmt = $conn->prepare("INSERT INTO Users (User_Type, First_Name, Last_Name, Email_Address, User_Password)
-                                VALUES (:User_Type, :First_Name, :Last_Name, :Email_Address, :User_Password)");
-        
-        if($_POST['User_Type'] != -1) {
-            $stmt->bindValue(':User_Type', $_POST['User_Type']);
-        } else {
-            $stmt->bindValue(':User_Type', null, PDO::PARAM_INT);
-        }
-        $stmt->bindValue(':First_Name', $_POST['First_Name']);
-        $stmt->bindValue(':Last_Name', $_POST['Last_Name']);
-        $stmt->bindValue(':Email_Address', $_POST['Email_Address']);
-        $stmt->bindValue(':User_Password', $_POST['User_Password']);
-        
-        if($_POST['User_Type'] != -1) {
-            $stmt->bindValue(':User_Type', $_POST['User_Type']);
-        } else {
-            $stmt->bindValue(':User_Type', null, PDO::PARAM_INT);
-        }
-        
-        $stmt->execute();
-        
-    } catch (PDOException $e) {
-        echo "Error: " . $e.getMessage();
-        die();
-    }
+
     
     echo "Success";
 }
