@@ -92,9 +92,9 @@
     	<div class="main-container">
     		<div class="welcome">
     			<?php 
-                if(isset($_SESSION['UserID'])){
-                    echo "Welcome '{$_SESSION['UserID']}'";
-                }
+//                 if(isset($_SESSION['UserID'])){
+//                     echo "Welcome '{$_SESSION['UserID']}'";
+//                 }
                 ?>php
             </div>
         	<form method="post">	 
