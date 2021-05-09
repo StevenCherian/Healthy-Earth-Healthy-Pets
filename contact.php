@@ -77,7 +77,8 @@
             <a href="main.php">Home</a>
             <a class="active" href="contact.php">Contact</a>
             <a href="myaccount.php">My Account</a>
-          </div>
+            <a href="logout.php">Logout</a>
+            </div>
         </div>
     	
     	<div class="main-container">

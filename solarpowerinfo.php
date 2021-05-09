@@ -31,6 +31,11 @@
               font-size: 12px;
               text-align: center;
             }   
+            
+            .header-right {
+              float: right;
+              padding-right: 12px;
+            }   
            
             .electricityinfo-container {
             	margin: 1%;
@@ -58,6 +63,9 @@
 	
     	<div class="myheader">
       		<h2>Healthy Earth, Healthy Pets</h2>
+      		<div class="header-right">
+	            <a href="logout.php">Logout</a>
+          </div>
     	</div>
     	
     	<div class="electricityinfo-container">
