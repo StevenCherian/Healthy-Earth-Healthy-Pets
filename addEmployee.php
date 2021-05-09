@@ -147,11 +147,11 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     try {
         $stmt = $conn->prepare("INSERT INTO Employee (Employee_Type, First_Name, Last_Name, Email_Address, Home_Address, Phone_Number, Weekly_Hours,
                                 Clock_In_Time, Clock_Out_Time, Salary, ID)
-                                VALUES (:Employee_Type, :First_Name, :Last_Name, :Email_Address, :Home_Address, :Phone_Number, :Weekly_Hours,
+                                VALUES (:User_Type, :First_Name, :Last_Name, :Email_Address, :Home_Address, :Phone_Number, :Weekly_Hours,
                                 :Clock_In_Time, :Clock_Out_Time, :Salary, :ID)");
         
-        if($_POST['Employee_Type'] != -1) {
-            $stmt->bindValue(':Employee_Type', $_POST['Employee_Type']);
+        if($_POST['User_Type'] != -1) {
+            $stmt->bindValue(':Employee_Type', $_POST['User_Type']);
         } else {
             $stmt->bindValue(':Employee_Type', null, PDO::PARAM_INT);
         }
