@@ -39,11 +39,12 @@ if (!isset($_SESSION['user_ID']))
             
             foreach($queryResult as $value){
                
-                if($value == "Veterinarian")
+                if($value == "Veterinarian") {
                     $_SESSION['user_ID'] = $queryResult['UserID'];
                     
                     // Redirect to URL
                     header("Location: admin_main.php");
+                }
                     
                 if($value == "SolarPowerComp") {
                     $_SESSION['user_ID'] = $queryResult['UserID'];
