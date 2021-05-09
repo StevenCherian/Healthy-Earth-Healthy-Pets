@@ -51,7 +51,6 @@ if (!isset($_SESSION['user_ID']))
                     
                     // Redirect to URL
                     header("Location: solarpowerinfo.php");
-                    
                 }
                 
                 if($value == "WindPowerComp") {
@@ -59,7 +58,6 @@ if (!isset($_SESSION['user_ID']))
                     
                     // Redirect to URL
                     header("Location: windpowerinfo.php");
-                    
                 }
                 
                 if($value == "Patient") {
@@ -70,39 +68,7 @@ if (!isset($_SESSION['user_ID']))
                     header("Location: main.php");
                 }
             }
-            
-/*             if($queryResult['UserID'] = "102") {
-                $_SESSION['user_ID'] = $queryResult['UserID'];
-    
-                // Redirect to URL
-                header("Location: admin_main.php");
-
-            }
-    
-            if($queryResult['User_Type'] = "SolarPowerComp") {
-                $_SESSION['user_ID'] = $queryResult['UserID'];
-    
-                // Redirect to URL
-                header("Location: solarpowerinfo.php");
-    
-            }
-    
-            if($queryResult['User_Type'] = "WindPowerComp") {
-                $_SESSION['user_ID'] = $queryResult['UserID'];
-    
-                // Redirect to URL
-                header("Location: windpowerinfo.php");
-                
-            }
-            
-             if($queryResult['User_Type'] = "Patient") {
-                 // Create session variable
-                 $_SESSION['user_ID'] = $queryResult['UserID'];
-                
-                 // Redirect to URL
-                 header("Location: contact.php");
-             } */
-        
+                  
         } else {
             // Password mismatch
             require('login.php');
