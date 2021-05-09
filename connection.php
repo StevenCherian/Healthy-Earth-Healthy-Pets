@@ -61,13 +61,13 @@ if (!isset($_SESSION['user_ID']))
                 
             }
             
-            if($queryResult['User_Type'] = "Patient") {
-                // Create session variable
-                $_SESSION['user_ID'] = $queryResult['UserID'];
+//             if($queryResult['User_Type'] = "Patient") {
+//                 // Create session variable
+//                 $_SESSION['user_ID'] = $queryResult['UserID'];
                 
-                // Redirect to URL
-                header("Location: contact.php");
-            }
+//                 // Redirect to URL
+//                 header("Location: contact.php");
+//             }
         
         } else {
             // Password mismatch
