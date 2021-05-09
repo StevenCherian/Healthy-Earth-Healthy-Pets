@@ -82,7 +82,7 @@ if (!isset($_SESSION['user_ID']))
     }
     
 } else {
-    echo "Please go to the previous page or 'main.php' and logout. Then try again.";
+    echo $_SESSION['user_ID'];
 }
 
 ?>
