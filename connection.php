@@ -39,9 +39,11 @@ if (!isset($_SESSION['user_ID']))
             
             foreach($queryResult as $value){
                 if($value == "Veterinarian")
-                    echo $value;
+                    $_SESSION['user_ID'] = $queryResult['UserID'];
+                    
+                    // Redirect to URL
+                    header("Location: admin_main.php");
             }
-            die;
             
             if($queryResult['UserID'] = "102") {
                 $_SESSION['user_ID'] = $queryResult['UserID'];
