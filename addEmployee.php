@@ -176,8 +176,8 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
         $stmt = $conn->prepare("INSERT INTO Users (User_Type, First_Name, Last_Name, Email_Address, User_Password)
                                 VALUES (:User_Type, :First_Name, :Last_Name, :Email_Address, :User_Password)");
         
-        if($_POST['Employee_Type'] != -1) {
-            $stmt->bindValue(':User_Type', $_POST['Employee_Type']);
+        if($_POST['User_Type'] != -1) {
+            $stmt->bindValue(':User_Type', $_POST['User_Type']);
         } else {
             $stmt->bindValue(':User_Type', null, PDO::PARAM_INT);
         }
