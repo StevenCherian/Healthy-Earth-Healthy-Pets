@@ -170,10 +170,16 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
             $stmt->bindValue(':ID', $_POST['ID']);
         } else {
             $stmt->bindValue(':ID', null, PDO::PARAM_INT);
-        }
+        }        
+        
         
         $stmt->execute();
-        
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+        die();
+    }
+    
+    try {
         
         $stmt = $conn->prepare("INSERT INTO Users (User_Type, First_Name, Last_Name, Email_Address, User_Password)
                                 VALUES (:User_Type, :First_Name, :Last_Name, :Email_Address, :User_Password)");
@@ -195,8 +201,9 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
         }
         
         $stmt->execute();
+        
     } catch (PDOException $e) {
-        echo "Error: " . $e->getMessage();
+        echo "Error: " . $e.getMessage();
         die();
     }
     
