@@ -74,9 +74,7 @@
         <div class="header">
           <a href="#default" class="logo">Healthy Earth, Healthy Pets</a>
           <div class="header-right">
-            <a href="main.php">Home</a>
-            <a href="contact.php">Contact</a>
-            <a class="active" href="myaccount.php">My Account</a>
+            <a href="logout.php">Logout</a>
           </div>
         </div>
     	
