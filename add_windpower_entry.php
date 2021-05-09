@@ -13,7 +13,8 @@ try {
     $stmt->bindValue(':Turbine_Energy_Consumption', $_POST["Turbine_Energy_Consumption"]);
     $stmt->bindValue(':MonthYearName', $_POST["MonthYearName"]);
     $stmt->execute();
-    header("solarpowerinfo.php");
+    
+    header("Location windpowerinfo.php");
     
 }catch(PDOException $e) {
     echo($e->getMessage());
