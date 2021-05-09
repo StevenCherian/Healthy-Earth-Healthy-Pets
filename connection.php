@@ -38,14 +38,39 @@ if (!isset($_SESSION['user_ID']))
         {
             
             foreach($queryResult as $value){
+               
                 if($value == "Veterinarian")
                     $_SESSION['user_ID'] = $queryResult['UserID'];
                     
                     // Redirect to URL
                     header("Location: admin_main.php");
+                    
+                if($value == "SolarPowerComp") {
+                    $_SESSION['user_ID'] = $queryResult['UserID'];
+                    
+                    // Redirect to URL
+                    header("Location: solarpowerinfo.php");
+                    
+                }
+                
+                if($value == "WindPowerComp") {
+                    $_SESSION['user_ID'] = $queryResult['UserID'];
+                    
+                    // Redirect to URL
+                    header("Location: windpowerinfo.php");
+                    
+                }
+                
+                if($value == "Patient") {
+                    // Create session variable
+                    $_SESSION['user_ID'] = $queryResult['UserID'];
+                    
+                    // Redirect to URL
+                    header("Location: contact.php");
+                }
             }
             die;
-            if($queryResult['UserID'] = "102") {
+/*             if($queryResult['UserID'] = "102") {
                 $_SESSION['user_ID'] = $queryResult['UserID'];
     
                 // Redirect to URL
@@ -69,13 +94,13 @@ if (!isset($_SESSION['user_ID']))
                 
             }
             
-//             if($queryResult['User_Type'] = "Patient") {
-//                 // Create session variable
-//                 $_SESSION['user_ID'] = $queryResult['UserID'];
+             if($queryResult['User_Type'] = "Patient") {
+                 // Create session variable
+                 $_SESSION['user_ID'] = $queryResult['UserID'];
                 
-//                 // Redirect to URL
-//                 header("Location: contact.php");
-//             }
+                 // Redirect to URL
+                 header("Location: contact.php");
+             } */
         
         } else {
             // Password mismatch
