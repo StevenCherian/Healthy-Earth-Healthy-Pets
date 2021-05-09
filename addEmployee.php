@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     echo "<tr><td>Store ID</td><td>";
     
     // Retrieve list of employees as potential manager of the new employee
-    $stmt = $conn->prepare("SELECT ID FROM Heatlhy_Earth_Healthy_Pets");
+    $stmt = $conn->prepare("SELECT ID FROM Healthy_Earth_Healthy_Pets");
     $stmt->execute();
     
     echo "<select name='ID'>";
