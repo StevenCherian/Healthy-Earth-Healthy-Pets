@@ -114,6 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     echo "<tr><td>Email</td><td><input name='Email_Address' type='email' size='40'></td></tr>";
     echo "<tr><td>Password</td><td><input name='User_Password' type='text' size='100'></td></tr>";
     echo "<tr><td>Home Address</td><td><input name='Home_Address' type='text' size='40'></td></tr>";
+    echo "<tr><td>Phone Number</td><td><input name='Phone_Number' type='text' size='13'></td></tr>";
     echo "<tr><td>Weekly Hours</td><td><input name='Weekly_Hours' type='number' size='3'></td></tr>";
     echo "<tr><td>Clock-In Time</td><td><input name='Clock_In_Time' type='text' size='10'></td></tr>";
     echo "<tr><td>Clock-Out Time</td><td><input name='Clock_Out_Time' type='text' size='10'></td></tr>";
@@ -149,7 +150,12 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
                                 VALUES (:Employee_Type, :First_Name, :Last_Name, :Email_Address, :Home_Address, :Phone_Number, :Weekly_Hours,
                                 :Clock_In_Time, :Clock_Out_Time, :Salary, :ID)");
         
-        $stmt->bindValue(':Employee_Type', $_POST['Employee_Type']);
+        if($_POST['Employee_Type'] != -1) {
+            $stmt->bindValue(':Employee_Type', $_POST['Employee_Type']);
+        } else {
+            $stmt->bindValue(':Employee_Type', null, PDO::PARAM_INT);
+        }
+        
         $stmt->bindValue(':First_Name', $_POST['First_Name']);
         $stmt->bindValue(':Last_Name', $_POST['Last_Name']);
         $stmt->bindValue(':Email_Address', $_POST['Email_Address']);
@@ -170,7 +176,11 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
         $stmt = $conn->prepare("INSERT INTO Users (User_Type, First_Name, Last_Name, Email_Address, User_Password)
                                 VALUES (:User_Type, :First_Name, :Last_Name, :Email_Address, :User_Password)");
         
-        $stmt->bindValue(':User_Type', $_POST['Employee_Type']);
+        if($_POST['Employee_Type'] != -1) {
+            $stmt->bindValue(':User_Type', $_POST['Employee_Type']);
+        } else {
+            $stmt->bindValue(':User_Type', null, PDO::PARAM_INT);
+        }
         $stmt->bindValue(':First_Name', $_POST['First_Name']);
         $stmt->bindValue(':Last_Name', $_POST['Last_Name']);
         $stmt->bindValue(':Email_Address', $_POST['Email_Address']);
