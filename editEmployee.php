@@ -85,8 +85,6 @@
 
 require_once('connection.php');
 
-session_start();
-
 if (!isset($_GET['Employee_ID']) && $_SERVER['REQUEST_METHOD'] != 'POST') {
     
     // Retrieve list of employees
@@ -128,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     echo "<tr><td>Weekly Hours</td><td><input name='Weekly_Hours' type='number' min='0.01' step='0.01' size='2' value='$row[Weekly_Hours]'></td></tr>";
     echo "<tr><td>Clock-In Time</td><td><input name='Clock_In_Time' type='text' size='10' value='$row[Clock_In_Time]'></td></tr>";
     echo "<tr><td>Clock-Out Time</td><td><input name='Clock_Out_Time' type='text' size='10' value='$row[Clock_Out_Time]'></td></tr>";
-    echo "<tr><td>Salary</td><td><input name='salary' type='number' min='0.01' step='0.01' size='8' value='$row[Salary]'></td></tr>";
+    echo "<tr><td>Salary</td><td><input name='Salary' type='number' min='0.01' step='0.01' size='8' value='$row[Salary]'></td></tr>";
     echo "<tr><td></td><td><input type='submit' value='Submit'></td></tr>";
     echo "</tbody>";
     echo "</table>";
