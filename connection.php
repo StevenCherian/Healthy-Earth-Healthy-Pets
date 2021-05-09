@@ -81,8 +81,6 @@ if (!isset($_SESSION['user_ID']))
         exit();
     }
     
-} else {
-    echo $_SESSION['user_ID'];
 }
 
 ?>
