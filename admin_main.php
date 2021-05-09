@@ -66,9 +66,6 @@
                 text-align: center;
             }
 	 	 
-	 	    .actions {
-	 	      
-	 	    }
         </style>
 	</head>
 	
