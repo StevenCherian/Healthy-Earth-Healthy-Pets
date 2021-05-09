@@ -82,7 +82,7 @@ if (!isset($_SESSION['user_ID']))
     }
     
 } else {
-    header("Location: main.php");
+    header("Location: contact.php");
 }
 
 ?>
