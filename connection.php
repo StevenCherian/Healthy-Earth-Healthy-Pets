@@ -37,7 +37,7 @@ if (!isset($_SESSION['user_ID']))
         if(!empty($queryResult) && password_verify($_POST["User_Password"], $queryResult['User_Password']))
         {
 
-            if($queryResult['UserID'] == 103) {
+            if($queryResult['UserID'] = 103) {
                 $_SESSION['user_ID'] = $queryResult['UserID'];
     
                 // Redirect to URL
