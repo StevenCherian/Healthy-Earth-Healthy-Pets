@@ -70,7 +70,7 @@ if (!isset($_SESSION['user_ID']))
                     header("Location: main.php");
                 }
             }
-            die;
+            
 /*             if($queryResult['UserID'] = "102") {
                 $_SESSION['user_ID'] = $queryResult['UserID'];
     
