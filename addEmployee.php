@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     echo "<tr><td>Employee Type</td><td>";
     
     // Retrieve list of store IDs
-    $stmt = $conn->prepare("SELECT User_Type FROM Users");
+    $stmt = $conn->prepare("SELECT User_Type FROM Users WHERE User_Type = 'Veterinarian' OR User_Type = 'Receptionist'");
     $stmt->execute();
     
     echo "<select name='User_Type'>";
@@ -125,12 +125,12 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     $stmt = $conn->prepare("SELECT ID FROM Healthy_Earth_Healthy_Pets");
     $stmt->execute();
     
-    echo "<select ID='ID'>";
+    echo "<select name='ID'>";
     
-    echo "<option value='-1'>1</option>";
+    echo "<option value='-1'>No ID</option>";
     
     while ($row = $stmt->fetch()) {
-        echo "<option value='$row[ID]'</option>";
+        echo "<option value='$row[ID]'>$row[ID]</option>";
     }
     
     echo "</select>";
