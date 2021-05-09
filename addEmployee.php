@@ -108,7 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     
     echo "<select name='ID'>";
     
-    echo "<option value='-1'>No manager</option>";
+    echo "<option value='-1'>1</option>";
     
     while ($row = $stmt->fetch()) {
         echo "<option value='$row[ID]'</option>";
