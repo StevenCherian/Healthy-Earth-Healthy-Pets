@@ -151,9 +151,9 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
                                 :Clock_In_Time, :Clock_Out_Time, :Salary, :ID)");
         
         if($_POST['User_Type'] != -1) {
-            $stmt->bindValue(':Employee_Type', $_POST['User_Type']);
+            $stmt->bindValue(':User_Type', $_POST['User_Type']);
         } else {
-            $stmt->bindValue(':Employee_Type', null, PDO::PARAM_INT);
+            $stmt->bindValue(':User_Type', null, PDO::PARAM_INT);
         }
         
         $stmt->bindValue(':First_Name', $_POST['First_Name']);
