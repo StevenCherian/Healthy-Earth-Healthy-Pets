@@ -21,7 +21,7 @@ if (!isset($_GET['Employee_ID'])) {
     echo "</form>";
 } else {
     
-    $employee_id = $_GET["Employee_ID"]; // GET NOT SAFE FOR PRIVACY OF VARIABLES
+    $Employee_ID = $_GET["Employee_ID"]; // GET NOT SAFE FOR PRIVACY OF VARIABLES
     
     $stmt = $conn->prepare("SELECT Employee_ID, First_Name, Last_Name, Email_Address, Home_Address, Phone_Number, Salary FROM Employee WHERE Employee_ID=$Employee_ID"); // NOT SAFE FOR SQL INJECTION
     
