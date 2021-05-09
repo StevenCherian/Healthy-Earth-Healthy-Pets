@@ -23,15 +23,6 @@
                 100% { opacity: 1; }
             }
             
-            .myheader {
-              padding: 1px;
-              width: 100%;
-              background: #404040;
-              color: #f2f2f2;
-              font-size: 12px;
-              text-align: center;
-            }   
-            
             .header {
               overflow: hidden;
               background-color: #404040;

@@ -25,14 +25,38 @@
                 100% { opacity: 1; }
             }
             
-            .myheader {
-              padding: 1px;
-              width: 100%;
-              background: #404040;
-              color: #f2f2f2;
-              font-size: 12px;
-              text-align: center;
+            .header {
+              overflow: hidden;
+              background-color: #404040;
+              padding: 5px 1px;
             }
+
+            .header a {
+              float: left;
+              color: white;
+              text-align: center;
+              padding: 12px;
+              text-decoration: none;
+              font-size: 15px; 
+              line-height: 15px;
+              border-radius: 4px;
+            }
+
+            .header a.logo {
+              font-size: 15px;
+              font-weight: bold;
+              color: white;
+            }
+
+            .header a.active {
+              background-color: dodgerblue;
+              color: white;
+            }
+
+            .header-right {
+              float: right;
+              padding-right: 12px;
+            }  
             
 
             .electricityinfo-container {
@@ -60,12 +84,12 @@
 	
 	<body>
 	
-    	<div class="myheader">
-      		<h2>Healthy Earth, Healthy Pets</h2>
-      		<div class="header-right">
-	            <a href="logout.php">Logout</a>
-        	</div>
-    	</div>
+        <div class="header">
+          <a href="#default" class="logo">Healthy Earth, Healthy Pets</a>
+          <div class="header-right">
+            <a href="logout.php">Logout</a>
+          </div>
+        </div>
     	
     	<div class="electricityinfo-container">
         	<form action="add_windpower_entry.php" method="post">	 
