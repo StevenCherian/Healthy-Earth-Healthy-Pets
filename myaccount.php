@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 
+<?php session_start(); ?>
+<?php require_once ('connection.php');?>
+
+
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -74,7 +78,6 @@
 	</head>
 	
 	<body>
-	        <?php session_start(); ?>
 	
         <div class="header">
           <a href="#default" class="logo">Healthy Earth, Healthy Pets</a>
@@ -88,12 +91,11 @@
     	
     	<div class="main-container">
     		<div class="welcome">
-            	<h3>Welcome</h3>
-                <?php 
-                if($_SESSION['logged']==true) {
-                  echo $_SESSION["username"];
-                } 
-                ?>
+    			<?php 
+                if(isset($_SESSION['UserID'])){
+                    echo "Welcome '{$_SESSION['UserID']}'";
+                }
+                ?>php
             </div>
         	<form method="post">	 
 

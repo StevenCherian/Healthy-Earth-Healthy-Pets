@@ -66,6 +66,9 @@
                 text-align: center;
             }
 	 	 
+	 	    .actions {
+	 	      
+	 	    }
         </style>
 	</head>
 	
@@ -79,6 +82,12 @@
         </div>
     	
     	<div class="main-container">
+    		<ul class="actions" style=list-style-type:none>
+	            <li><a href="listemployees.php">List all employees</a></li>
+	            <li><a href="listemployeeinfo.php">List information for an employee</a></li>
+	            <li><a href="addEmployee.php">Add an employee</a></li>
+	            <li><a href="editEmployee.php">Edit an employee</a></li>
+            </ul>
         	<form method="post">	 
 
         	</form>
