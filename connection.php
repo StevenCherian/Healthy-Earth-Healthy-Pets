@@ -58,13 +58,15 @@ if (!isset($_SESSION['user_ID']))
     
                 // Redirect to URL
                 header("Location: windpowerinfo.php");
-            } else {
+                
+            }
             
-            // Create session variable
-            $_SESSION['user_ID'] = $queryResult['UserID'];
-            
-            // Redirect to URL
-            header("Location: main.php");
+            if($queryResult['User_Type'] == "Patient") {
+                // Create session variable
+                $_SESSION['user_ID'] = $queryResult['UserID'];
+                
+                // Redirect to URL
+                header("Location: main.php");
             }
         
         } else {
@@ -72,13 +74,13 @@ if (!isset($_SESSION['user_ID']))
             require('login.php');
             exit();
         }
-    }
-    else
-    {
+        
+    } else {
         // Show login page
         require('login.php');
         exit();
     }
+    
 } else {
     header("Location: main.php");
 }
