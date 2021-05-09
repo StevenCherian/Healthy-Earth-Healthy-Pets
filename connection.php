@@ -66,7 +66,7 @@ if (!isset($_SESSION['user_ID']))
                 $_SESSION['user_ID'] = $queryResult['UserID'];
                 
                 // Redirect to URL
-                header("Location: main.php");
+                header("Location: contact.php");
             }
         
         } else {
