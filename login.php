@@ -71,9 +71,6 @@
         			<label for="last_name"><b>Last Name:</b></label>
         			<input type="text" placeholder="Last Name" name="Last_Name" required>
         			
-    				<label for="username"><b>Username:</b></label>
-        			<input type="text" placeholder="Username" name="Username" required>
-        			
         			<label for="email"><b>Email:</b></label>
         			<input type="text" placeholder="Email" name="Email_addr" required>
         			

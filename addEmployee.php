@@ -91,10 +91,11 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     echo "<form method='post' action='addEmployee.php'>";
     echo "<table style='border: solid 1px black;'>";
     echo "<tbody>";
-    echo "<tr><td>Employee Type</td><td><input name='Employee_Type' type='text' size='25'></td></tr>";
+    echo "<tr><td>Employee Type</td><td>";
     echo "<tr><td>First name</td><td><input name='First_Name' type='text' size='10'></td></tr>";
     echo "<tr><td>Last name</td><td><input name='Last_Name' type='text' size='10'></td></tr>";
     echo "<tr><td>Email</td><td><input name='Email_Address' type='email' size='40'></td></tr>";
+    echo "<tr><td>Password</td><td><input name='User_Password' type='text' size='100'></td></tr>";
     echo "<tr><td>Home Address</td><td><input name='Home_Address' type='text' size='40'></td></tr>";
     echo "<tr><td>Weekly Hours</td><td><input name='Weekly_Hours' type='number' size='3'></td></tr>";
     echo "<tr><td>Clock-In Time</td><td><input name='Clock_In_Time' type='text' size='10'></td></tr>";
@@ -102,11 +103,26 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     echo "<tr><td>Salary</td><td><input name='Salary' type='number' min='0.01' step='0.01' size='8'></td></tr>";
     echo "<tr><td>Store ID</td><td>";
     
-    // Retrieve list of employees as potential manager of the new employee
+    // Retrieve list of store IDs
+    $stmt = $conn->prepare("SELECT User_Type FROM Users");
+    $stmt->execute();
+    
+    echo "<select User_Type='User_Type'>";
+    
+    echo "<option value='-1'>No type</option>";
+    
+    while ($row = $stmt->fetch()) {
+        echo "<option value='$row[User_Type]'</option>";
+    }
+    
+    echo "</select>";
+    echo "</td></tr>";
+   
+    // Retrieve list of store IDs
     $stmt = $conn->prepare("SELECT ID FROM Healthy_Earth_Healthy_Pets");
     $stmt->execute();
     
-    echo "<select name='ID'>";
+    echo "<select ID='ID'>";
     
     echo "<option value='-1'>1</option>";
     
@@ -147,6 +163,22 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
             $stmt->bindValue(':ID', null, PDO::PARAM_INT);
         }
         
+        
+        $stmt = $conn->prepare("INSERT INTO Users (User_Type, First_Name, Last_Name, Email_Address, User_Password)
+                                VALUES (:User_Type, :First_Name, :Last_Name, :Email_Address, :User_Password)");
+        
+        $stmt->bindValue(':User_Type', $_POST['Employee_Type']);
+        $stmt->bindValue(':First_Name', $_POST['First_Name']);
+        $stmt->bindValue(':Last_Name', $_POST['Last_Name']);
+        $stmt->bindValue(':Email_Address', $_POST['Email_Address']);
+        $stmt->bindValue(':User_Password', $_POST['User_Password']);
+        
+        if($_POST['User_Type'] != -1) {
+            $stmt->bindValue(':User_Type', $_POST['User_Type']);
+        } else {
+            $stmt->bindValue(':User_Type', null, PDO::PARAM_INT);
+        }
+
         
         $stmt->execute();
     } catch (PDOException $e) {
