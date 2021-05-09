@@ -65,11 +65,16 @@
                 color: #000000;
                 text-align: center;
             }
+            
+            .welcome {
+            	text-align: left;
+            }
 	 	 
         </style>
 	</head>
 	
 	<body>
+	        <?php session_start(); ?>
 	
         <div class="header">
           <a href="#default" class="logo">Healthy Earth, Healthy Pets</a>
@@ -82,6 +87,14 @@
         </div>
     	
     	<div class="main-container">
+    		<div class="welcome">
+            	<h3>Welcome</h3>
+                <?php 
+                if($_SESSION['logged']==true) {
+                  echo $_SESSION["username"];
+                } 
+                ?>
+            </div>
         	<form method="post">	 
 
         	</form>
