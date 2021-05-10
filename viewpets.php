@@ -94,6 +94,7 @@ if (!isset($_GET['Pet_ID']) && $_SERVER['REQUEST_METHOD'] != 'POST') {
     
     echo "<form method='get'>";
     echo "<select name='Pet_ID' onchange='this.form.submit();'>";
+    echo "<option value='Option1'></option>";
     
     while ($row = $stmt->fetch()) {
         echo "<option value='$row[Pet_ID]'>$row[Pet_Name]</option>";
