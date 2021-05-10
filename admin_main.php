@@ -83,6 +83,7 @@
 	            <li><a href="listemployees.php">List all employees</a></li>
 	            <li><a href="listemployeeinfo.php">List information for an employee</a></li>
                 <li><a href="listpowercompanyinfo.php">List information for power companies</a></li>
+                <li><a href="editpowercompanyinfo.php">Edit information a power company</a>
 	            <li><a href="addEmployee.php">Add an employee</a></li>
 	            <li><a href="editEmployee.php">Edit an employee</a></li>
             </ul>
