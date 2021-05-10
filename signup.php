@@ -18,69 +18,48 @@ try {
     echo "Connection failed: " . $e->getMessage();
 }
 
-// Start or resume session variables
-session_start();
-
-// If the user_ID session is not set, then the user has not logged in yet
-if (!isset($_SESSION['user_ID']))
-{
-    // If the page is receiving the email and password from the login form then verify the login data
-    if (isset($_POST['Email_Address']) && isset($_POST['User_Password']))
-    {
-        $stmt = $conn->prepare("SELECT UserID, User_Type, User_Password FROM Users WHERE Email_Address=:Email_Address");
+try {
+    // If the user_ID session is not set, then the user has not logged in yet
+    if (isset($_SESSION['Email_Address'])) {
+        
+        $stmt = $conn->prepare("SELECT Email_Address FROM Users WHERE Email_Address=:Email_Address");
         $stmt->bindValue(':Email_Address', $_POST['Email_Address']);
         $stmt->execute();
+        $row = $stmt->fetch();
         
-        $queryResult = $stmt->fetch();
+        if(is_array($row)) {
+            $error = 0;
+            echo $error;
+            header("Location: login.php");
+            exit();
         
-        // Verify password submitted by the user with the hash stored in the database
-        if(!empty($queryResult) && password_verify($_POST["User_Password"], $queryResult['User_Password']))
-        {
-            
-            foreach($queryResult as $value){
-                
-                if($value == "Veterinarian") {
-                    $_SESSION['user_ID'] = $queryResult['UserID'];
-                    
-                    // Redirect to URL
-                    header("Location: admin_main.php");
-                }
-                
-                if($value == "SolarPowerComp") {
-                    $_SESSION['user_ID'] = $queryResult['UserID'];
-                    
-                    // Redirect to URL
-                    header("Location: solarpowerinfo.php");
-                }
-                
-                if($value == "WindPowerComp") {
-                    $_SESSION['user_ID'] = $queryResult['UserID'];
-                    
-                    // Redirect to URL
-                    header("Location: windpowerinfo.php");
-                }
-                
-                if($value == "Patient") {
-                    // Create session variable
-                    $_SESSION['user_ID'] = $queryResult['UserID'];
-                    
-                    // Redirect to URL
-                    header("Location: main.php");
-                }
-            }
-            
         } else {
-            // Password mismatch
-            require('login.php');
+            $stmt = $conn->prepare("INSERT INTO Users VALUES (:User_Type, :First_Name, :Last_Name, :Email_Address, :User_Password)");
+            $password = password_hash($_POST['User_Password'], PASSWORD_BCRYPT);
+            
+            $stmt->bindParam(":User_Type", "Patient");
+            $stmt->bindParam(":First_Name", $_POST['First_Name']);
+            $stmt->bindParam(":Last_Name", $_POST['Last_Name']);
+            $stmt->bindParam(":Email_Address", $_POST['Email_Address']);
+            $stmt->bindParam(":User_Password", $password);
+            $stmt->execute();
+            
+            // Start or resume session variables
+            session_start();
+            $stmt2 = $conn->prepare("SELECT UserID FROM Users WHERE Email_Address=:Email_Address");
+            $stmt2->bindValue(':Email_Address', $_POST['Email_Address']);
+            $stmt2->execute();
+            
+            $queryResult = $stmt->fetch();
+            $_SESSION['user_ID'] = $queryResult['UserID'];
+            header("Location: main.php");
             exit();
         }
-        
-    } else {
-        // Show login page
-        require('login.php');
-        exit();
     }
-    
+
+} catch(PDOException $e) {
+    echo "Error: " . $e->getMessage();
+    die();
 }
 
 ?>

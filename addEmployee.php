@@ -149,6 +149,8 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
         $stmt = $conn->prepare("INSERT INTO Users (User_Type, First_Name, Last_Name, Email_Address, User_Password)
                                 VALUES (:User_Type, :First_Name, :Last_Name, :Email_Address, :User_Password)");
         
+        $password = password_hash($_POST['User_Password'], PASSWORD_BCRYPT);
+        
         if($_POST['User_Type'] != -1) {
             $stmt->bindValue(':User_Type', $_POST['User_Type']);
         } else {
@@ -157,7 +159,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
         $stmt->bindValue(':First_Name', $_POST['First_Name']);
         $stmt->bindValue(':Last_Name', $_POST['Last_Name']);
         $stmt->bindValue(':Email_Address', $_POST['Email_Address']);
-        $stmt->bindValue(':User_Password', $_POST['User_Password']);
+        $stmt->bindValue(':User_Password', $password);
         
         if($_POST['User_Type'] != -1) {
             $stmt->bindValue(':User_Type', $_POST['User_Type']);
