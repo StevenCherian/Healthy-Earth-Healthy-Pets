@@ -6,6 +6,8 @@ $specific = array("id" => 100);
 if (!in_array($_SESSION['user_ID'], $specific)) {
     header("Location: notauthorized.php");
     exit();
+} else {
+    header("Location: admin_main.php");
 }
 
 ?>
