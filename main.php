@@ -89,6 +89,11 @@
 	 	 
 	 	     #createAppointmentPopup {
 	 	         display:none; 
+	 	         border-radius: 20px;
+	 	         margin: auto; left: 0;
+	 	         right: 0; 
+	 	         background-color: black;
+	 	         margin-top: 65px;
 	 	     }
 	 	 
         </style>
@@ -96,7 +101,7 @@
 	
 	<body>
 		<form method="post" action="submitappointment.php">
-    		<div id="createAppointmentPopup" style="width:85%; max-width:500px; z-index:100; padding-top:65px;">
+    		<div id="createAppointmentPopup" style="width:85%; max-width:500px; z-index:100; padding:25px">
         		<input type="text" value="start_time" placeholder="start time" required>
         		
         		<button type="submit">Create Appointment</button>
@@ -127,11 +132,11 @@
 		
 		<script>
 			function openAppointmentPopup() {
-				document.getElementByID("createAppointmentPopup").style.display="grid";
+				document.getElementById('createAppointmentPopup').style.display= 'grid';
 			}
 			
 			function closeAppointmentPopup() {
-				document.getElementByID("createAppointmentPopup").style.display="none";
+				document.getElementById('createAppointmentPopup').style.display='none';
 			}			
 		</script>
 		
