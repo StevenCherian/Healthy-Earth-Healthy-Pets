@@ -4,7 +4,7 @@
 require_once 'connection.php';
 
 $stmt=$conn->prepare("SELECT UserID FROM Users WHERE UserID = :emp AND (User_Type = 'Veterinarian' OR User_Type = 'SolarPowerComp' OR User_Type = 'WindPowerComp')");
-$stmt->bindParam(":empID", "$_SESSION[user_ID]");
+$stmt->bindParam(":empID", $_SESSION['user_ID']);
 $stmt->execute();
 $admin = $stmt->fetch();
 
