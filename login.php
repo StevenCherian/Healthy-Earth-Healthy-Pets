@@ -41,6 +41,11 @@
       		<h2>Healthy Earth, Healthy Pets</h2>
     	</div>
     	
+    	<div class=sign-in-info>
+    		<h4>Admin Email: JebronLames.va@gmail.com | Password: loVE^U^Lebron</h4>
+    		<h4>Customer Email: steQueen@gmail.com | Password: S!Q117A</h4>
+    	</div>
+    	
     	<div class="login-container">
         	<form method="post" action="connection.php">	 
         		<div class ="login" id="log">
