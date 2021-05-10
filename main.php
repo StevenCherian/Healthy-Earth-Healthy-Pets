@@ -87,12 +87,16 @@
                 text-align: center;
             }
 	 	 
+	 	     #createAppointmentPopup {
+	 	         display:none; 
+	 	     }
+	 	 
         </style>
 	</head>
 	
 	<body>
 		<form method="post" action="submitappointment.php">
-    		<div id="createAppointmentPopup" style="width:85%; max-width:500px; z-index:100; display:none; padding-top:65px;">
+    		<div id="createAppointmentPopup" style="width:85%; max-width:500px; z-index:100; padding-top:65px;">
         		<input type="text" value="start_time" placeholder="start time" required>
         		
         		<button type="submit">Create Appointment</button>
