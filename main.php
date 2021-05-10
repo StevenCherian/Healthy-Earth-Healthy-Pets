@@ -149,7 +149,7 @@
             		
         		<div style="display: inline-grid">
             		<button type="button" onclick="closePetEntryPopup()">Cancel</button>
-            		<button type="submit">Create Appointment</button>
+            		<button type="submit">Submit</button>
         		</div>
     		
     		</div>
