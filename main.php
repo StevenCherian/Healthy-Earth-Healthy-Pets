@@ -94,6 +94,7 @@
 	 	         right: 0; 
 	 	         background-color: black;
 	 	         margin-top: 65px;
+	 	         position: absolute;
 	 	     }
 	 	 
         </style>
@@ -104,7 +105,11 @@
     		<div id="createAppointmentPopup" style="width:85%; max-width:500px; z-index:100; padding:25px">
         		<input type="text" value="start_time" placeholder="start time" required>
         		
-        		<button type="submit">Create Appointment</button>
+        		<div style="display: inline-block">
+            		<button onclick="closeAppointmentPopup">Cancel</button>
+            		<button type="submit">Create Appointment</button>
+        		</div>
+        		
     		</div>
 		</form>
 		
