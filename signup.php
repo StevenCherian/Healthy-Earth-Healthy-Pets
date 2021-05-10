@@ -50,7 +50,7 @@ try {
             
             $queryResult = $stmt2->fetch();
             foreach($queryResult as $value){
-                echo $value;
+                printf("%s\n, $value");
             }
             session_start();
             $_SESSION['user_ID'] = $queryResult['UserID'];
