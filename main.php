@@ -177,6 +177,8 @@
     				<button onclick="openAppointmentPopup()">Schedule an appointment</button>
     				<button onclick="openPetEntryPopup()">Enter your pet info</button>
     			</div>
+    			
+    			<h4>Go to the "My Account" Page to view or edit appointment or pet info</h4>
 		</div>
 		
 		<script>
