@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     echo "<tr><td>Weekly Hours</td><td><input name='Weekly_Hours' type='number' maxlength='3' size='3'></td></tr>";
     echo "<tr><td>Clock-In Time</td><td><input name='Clock_In_Time' type='text' maxlength='10' size='10'></td></tr>";
     echo "<tr><td>Clock-Out Time</td><td><input name='Clock_Out_Time' type='text' maxlength='10' size='10'></td></tr>";
-    echo "<tr><td>Salary</td><td><input name='Salary' type='number' min='0.01' step='0.01' maxlength='8' size='8'></td></tr>";
+    echo "<tr><td>Salary</td><td><input name='Salary' type='text' pattern='\d*' maxlength='8' size='8'></td></tr>";
     echo "<tr><td>Store ID</td><td>";
     
    
