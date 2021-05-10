@@ -3,7 +3,7 @@
 <?php 
 $specific = array("id" => 102);
 
-if (!in_array($_SESSION['UserID'], $specific)) {
+if (!in_array($_SESSION['UserID'], 102)) {
     header("Location: notauthorized.php");
     exit();
 } else {
