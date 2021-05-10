@@ -31,6 +31,9 @@
               text-align: center;
             }
             
+            .sign-ing-info {
+                text-align: center;
+            }
 	 	 
         </style>
 	</head>
