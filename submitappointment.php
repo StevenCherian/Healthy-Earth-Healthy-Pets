@@ -10,9 +10,9 @@ try {
                      (:apptrsn, :checkintime, :checkindate)";
     
     $stmt = $conn->prepare($sqlQuery);
-    $stmt->bindValue(':Appointment_Reason', $_POST["apptrsn"]);
-    $stmt->bindValue(':Check_In_Time', $_POST["checkintime"]);
-    $stmt->bindValue(':Check_In_Date', $_POST["checkindate"]);
+    $stmt->bindValue(':apptrsn', $_POST["apptrsn"]);
+    $stmt->bindValue(':checkintime', $_POST["checkintime"]);
+    $stmt->bindValue(':checkindate', $_POST["checkindate"]);
     $stmt->execute();
     
     header("Location: main.php");
