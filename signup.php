@@ -45,12 +45,12 @@ try {
             $stmt->execute();
             
             // Start or resume session variables
-            session_start();
             $stmt2 = $conn->prepare("SELECT UserID FROM Users WHERE Email_Address=:Email_Address");
             $stmt2->bindValue(':Email_Address', $_POST['Email_Address']);
             $stmt2->execute();
             
             $queryResult = $stmt->fetch();
+            session_start();
             $_SESSION['user_ID'] = $queryResult['UserID'];
             header("Location: main.php");
             exit();
