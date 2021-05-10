@@ -97,6 +97,10 @@
 	 	         position: absolute;
 	 	     }
 	 	 
+	 	     label {
+	 	         color: white;
+	 	     }
+	 	 
         </style>
 	</head>
 	
