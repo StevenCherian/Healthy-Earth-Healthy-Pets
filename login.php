@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 
 <html>
-
-
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	 	<link rel="stylesheet" href="styles.css">
@@ -61,7 +59,7 @@
         	 	</div>
         	</form>
         	
-        	<form method="post">
+        	<form method="post" action="signup.php">
         		<div class="sign_up" id="sign-up">
         			<h2><strong>Create an account</strong></h2>
         			
@@ -72,10 +70,10 @@
         			<input type="text" placeholder="Last Name" name="Last_Name" required>
         			
         			<label for="email"><b>Email:</b></label>
-        			<input type="text" placeholder="Email" name="Email_addr" required>
+        			<input type="text" placeholder="Email" name="Email_Address" required>
         			
         			<label for="password"><b>Password:</b></label>
-        			<input type="text" placeholder="Password" name="Password" required>
+        			<input type="text" placeholder="Password" name="User_Password" required>
         			
         			<div style="display: inline-grid;margin: 3% auto auto auto;grid-row-gap: 7px;">
         				<button type="submit">Create Account</button>
