@@ -20,7 +20,7 @@ try {
 
 try {
     // If the user_ID session is not set, then the user has not logged in yet
-    if (isset($_SESSION['Email_Address'])) {
+    if (isset($_SESSION['user_ID'])) {
         
         $stmt = $conn->prepare("SELECT Email_Address FROM Users WHERE Email_Address=:Email_Address");
         $stmt->bindValue(':Email_Address', $_POST['Email_Address']);
@@ -44,12 +44,11 @@ try {
             $stmt->bindParam(":User_Password", $password);
             $stmt->execute();
             
-            // Start or resume session variables
             $stmt2 = $conn->prepare("SELECT UserID FROM Users WHERE Email_Address=:Email_Address");
             $stmt2->bindValue(':Email_Address', $_POST['Email_Address']);
             $stmt2->execute();
             
-            $queryResult = $stmt->fetch();
+            $queryResult = $stmt2->fetch();
             session_start();
             $_SESSION['user_ID'] = $queryResult['UserID'];
             header("Location: main.php");
