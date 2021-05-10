@@ -96,6 +96,16 @@
 	 	         margin-top: 65px;
 	 	         position: absolute;
 	 	     }
+	 	     
+	 	     #createPetEntryPopup {
+	 	         display:none; 
+	 	         border-radius: 20px;
+	 	         margin: auto; left: 0;
+	 	         right: 0; 
+	 	         background-color: #333333;
+	 	         margin-top: 65px;
+	 	         position: absolute;
+	 	     }
 	 	 
 	 	     label {
 	 	         color: white;
@@ -107,19 +117,41 @@
 	<body>
 		<form method="post" action="submitappointment.php">
     		<div id="createAppointmentPopup" style="width:85%; max-width:500px; z-index:100; padding:25px">
-    		<label for="apptrsn">Appointment Reason</label>
-        		<input type="text" maxlength="100" name="apptrsn" placeholder="Appointment reason" required>
-        	<label for="checkintime">Check-In Time</label>
-        		<input type="time" name="checkintime" min="09:00" max="18:00" placeholder="Check-In Time" required>
-       		<label for="checkindate">Check-In Date</label>
-        		<input type="date" name="checkindate" placeholder="Check-In Date" required>
         		
-        		
+        		<label for="apptrsn">Appointment Reason</label>
+            		<input type="text" maxlength="100" name="apptrsn" placeholder="Appointment reason" required>
+            	
+            	<label for="checkintime">Check-In Time</label>
+            		<input type="time" name="checkintime" min="09:00" max="18:00" placeholder="Check-In Time" required>
+           		
+           		<label for="checkindate">Check-In Date</label>
+            		<input type="date" name="checkindate" placeholder="Check-In Date" required>
+            		
         		<div style="display: inline-block">
             		<button type="button" onclick="closeAppointmentPopup()">Cancel</button>
             		<button type="submit">Create Appointment</button>
         		</div>
         		
+    		</div>
+		</form>
+		
+		<form method="post" action="submitpetentry.php">
+    		<div id="createPetEntryPopup" style="width:85%; max-width:500px; z-index:100; padding:25px">
+        		
+        		<label for="petname">Pet Name</label>
+            		<input type="text" name="apptrsn" maxlength="15" placeholder="Pet name" required>
+            	
+            	<label for="species">Species</label>
+            		<input type="text" name="spcs" maxlength="30" placeholder="Species" required>
+           		
+           		<label for="birthdate">Date of Birth</label>
+            		<input type="date" name="birthdate" placeholder="Date of Birth" required>
+            		
+        		<div style="display: inline-block">
+            		<button type="button" onclick="closePetEntryPopup()">Cancel</button>
+            		<button type="submit">Create Appointment</button>
+        		</div>
+    		
     		</div>
 		</form>
 		
@@ -143,6 +175,7 @@
         			
     		    <div style="display: inline-grid; margin: 3% auto auto auto; grid-row-gap: 7px;">
     				<button onclick="openAppointmentPopup()">Schedule an appointment</button>
+    				<button onclick="openPetEntryPopup()">Enter your pet info</button>
     			</div>
 		</div>
 		
@@ -153,6 +186,14 @@
 			
 			function closeAppointmentPopup() {
 				document.getElementById('createAppointmentPopup').style.display='none';
+			}	
+			
+			function openPetEntryPopup() {
+				document.getElementById('createPetEntryPopup').style.display= 'grid';
+			}
+			
+			function closePetEntryPopup() {
+				document.getElementById('createPetEntryPopup').style.display='none';
 			}			
 		</script>
 		
