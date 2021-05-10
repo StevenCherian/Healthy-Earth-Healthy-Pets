@@ -92,6 +92,8 @@ if (!isset($_GET['Appointment_ID']) && $_SERVER['REQUEST_METHOD'] != 'POST') {
     $stmt->bindValue(':UserID', $_SESSION['user_ID']);
     $stmt->execute();
     
+    echo $_SESSION['user_ID'];
+    
     echo "<form method='get'>";
     echo "<select name='Appointment_ID' onchange='this.form.submit();'>";
     echo "<option value='None'></option>";
