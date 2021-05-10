@@ -120,9 +120,9 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     echo "<form method='post' action='viewpets.php'>";
     echo "<table style='border: solid 1px black;'>";
     echo "<tbody>";
-    echo "<tr><td>Pet name</td><td><input name='Pet_Name' type='text' size='15' value='$row[Pet_Name]'></td></tr>";
-    echo "<tr><td>Species</td><td><input name='Species' type='text' size='30' value='$row[Species]'></td></tr>";
-    echo "<tr><td>Birthdate</td><td><input name='Birthdate' type='date' size='13' value='$row[Birthdate]'></td></tr>";
+    echo "<tr><td>Pet name</td><td><input name='Pet_Name' type='text' maxlength='15' size='15' value='$row[Pet_Name]'></td></tr>";
+    echo "<tr><td>Species</td><td><input name='Species' type='text' maxlength='30' size='30' value='$row[Species]'></td></tr>";
+    echo "<tr><td>Birthdate</td><td><input name='Birthdate' type='date' maxlength='13' size='13' value='$row[Birthdate]'></td></tr>";
     echo "<tr><td></td><td><input type='submit' value='Submit'></td></tr>";
     echo "</tbody>";
     echo "</table>";

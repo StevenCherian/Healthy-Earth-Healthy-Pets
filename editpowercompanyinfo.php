@@ -119,9 +119,9 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     echo "<form method='post' action='editpowercompanyinfo.php'>";
     echo "<table style='border: solid 1px black;'>";
     echo "<tbody>";
-    echo "<tr><td>Company name</td><td><input name='Company_Name' type='text' size='30' value='$row[Company_Name]'></td></tr>";
-    echo "<tr><td>Address</td><td><input name='Company_Address' type='text' size='50' value='$row[Company_Address]'></td></tr>";
-    echo "<tr><td>Phone Number</td><td><input name='Company_Phone_Number' type='text' size='13' value='$row[Company_Phone_Number]'></td></tr>";
+    echo "<tr><td>Company name</td><td><input name='Company_Name' type='text' maxlength='30' size='30' value='$row[Company_Name]'></td></tr>";
+    echo "<tr><td>Address</td><td><input name='Company_Address' type='text' maxlength='50' size='50' value='$row[Company_Address]'></td></tr>";
+    echo "<tr><td>Phone Number</td><td><input name='Company_Phone_Number' type='text' maxlength='13' size='13' value='$row[Company_Phone_Number]'></td></tr>";
     echo "<tr><td></td><td><input type='submit' value='Submit'></td></tr>";
     echo "</tbody>";
     echo "</table>";

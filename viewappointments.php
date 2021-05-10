@@ -88,7 +88,7 @@ require_once('connection.php');
 if (!isset($_GET['Appointment_ID']) && $_SERVER['REQUEST_METHOD'] != 'POST') {
     
     // Retrieve list of employees
-    $stmt = $conn->prepare("SELECT Appointment_ID, Appointment_Reason FROM Appointment WHERE UserID=:UserID ORDER BY Appointment_ID");
+    $stmt = $conn->prepare("SELECT Appointment_ID, Appointment_Reason FROM Appointment WHERE UserID=:UserID ORDER BY Appointment_Reason");
     $stmt->bindValue(':UserID', $_SESSION['user_ID']);
     $stmt->execute();
     
@@ -120,9 +120,9 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     echo "<form method='post' action='viewappointments.php'>";
     echo "<table style='border: solid 1px black;'>";
     echo "<tbody>";
-    echo "<tr><td>Appointment Reason</td><td><input name='Appointment_Reason' type='text' size='100' value='$row[Appointment_Reason]'></td></tr>";
-    echo "<tr><td>Check-In Time</td><td><input name='Check_In_Time' type='time' size='10' value='$row[Check_In_Time]'></td></tr>";
-    echo "<tr><td>Check-In Date</td><td><input name='Check_In_Date' type='date' size='13' value='$row[Check_In_Date]'></td></tr>";
+    echo "<tr><td>Appointment Reason</td><td><input name='Appointment_Reason' type='text' maxlength='100' size='100' value='$row[Appointment_Reason]'></td></tr>";
+    echo "<tr><td>Check-In Time</td><td><input name='Check_In_Time' type='time' maxlength='10' size='10' value='$row[Check_In_Time]'></td></tr>";
+    echo "<tr><td>Check-In Date</td><td><input name='Check_In_Date' type='date' maxlength='13' size='13' value='$row[Check_In_Date]'></td></tr>";
     echo "<tr><td></td><td><input type='submit' value='Submit'></td></tr>";
     echo "</tbody>";
     echo "</table>";
