@@ -127,11 +127,11 @@
 		
 		<script>
 			function openAppointmentPopup() {
-				document.findElementByID("createAppointmentPopup").style.display="grid";
+				document.getElementByID("createAppointmentPopup").style.display="grid";
 			}
 			
 			function closeAppointmentPopup() {
-				document.findElementByID("createAppointmentPopup").style.display="none";
+				document.getElementByID("createAppointmentPopup").style.display="none";
 			}			
 		</script>
 		
