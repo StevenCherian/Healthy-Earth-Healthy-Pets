@@ -34,10 +34,10 @@ try {
             exit();
         
         } else {
+            $name="Patient";
             $stmt = $conn->prepare("INSERT INTO Users VALUES (:User_Type, :First_Name, :Last_Name, :Email_Address, :User_Password)");
             $password = password_hash($_POST['User_Password'], PASSWORD_BCRYPT);
             
-            $name=Patient;
             $stmt->bindValue(":User_Type", $name, PDO::PARAM_STR);
             $stmt->bindParam(":First_Name", $_POST['First_Name']);
             $stmt->bindParam(":Last_Name", $_POST['Last_Name']);
