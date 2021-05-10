@@ -103,8 +103,11 @@
 	<body>
 		<form method="post" action="submitappointment.php">
     		<div id="createAppointmentPopup" style="width:85%; max-width:500px; z-index:100; padding:25px">
-        		<input type="text" maxlength="100" name="apptrsn" placeholder="Appointment Reason" required>
+    		<label for="apptrsn">Appointment Reason</label>
+        		<input type="text" maxlength="100" name="apptrsn" placeholder="Appointment reason" required>
+        	<label for="checkintime">Check-In Time</label>
         		<input type="time" name="checkintime" min="09:00" max="18:00" placeholder="Check-In Time" required>
+       		<label for="checkindate">Check-In Date</label>
         		<input type="date" name="checkindate" placeholder="Check-In Date" required>
         		
         		
