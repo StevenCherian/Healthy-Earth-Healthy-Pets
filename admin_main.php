@@ -3,8 +3,8 @@
 
 require_once 'connection.php';
 
-$stmt=$conn->prepare("SELECT UserID FROM Users WHERE userID = :emp AND (User_Type = 'Veterinarian' OR User_Type = 'SolarPowerComp' OR User_Type = 'WindPowerComp')");
-$stmt->bindParam(":empID", "$_SESSION[User_ID]");
+$stmt=$conn->prepare("SELECT UserID FROM Users WHERE UserID = :emp AND (User_Type = 'Veterinarian' OR User_Type = 'SolarPowerComp' OR User_Type = 'WindPowerComp')");
+$stmt->bindParam(":empID", "$_SESSION[UserID]");
 $stmt->execute();
 $admin = $stmt->fetch();
 
