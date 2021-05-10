@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     echo "<tr><td>Employee Type</td><td>";
     
     // Retrieve list of store IDs
-    $stmt = $conn->prepare("SELECT User_Type FROM Users WHERE User_Type = 'Veterinarian' OR User_Type = 'Receptionist'");
+    $stmt = $conn->prepare("SELECT User_Type FROM Users WHERE User_Type = 'Veterinarian' OR User_Type = 'Receptionist' LIMIT 2");
     $stmt->execute();
     
     echo "<select name='User_Type'>";
