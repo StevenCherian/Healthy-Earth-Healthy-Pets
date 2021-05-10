@@ -144,7 +144,7 @@
             	<label for="species">Species</label>
             		<input type="text" name="species" maxlength="30" placeholder="Species" required>
            		
-           		<label for="birthdate">Date of Birth</label>
+           		<label for="birthdate">Pet Date of Birth</label>
             		<input type="date" name="birthdate" placeholder="Date of Birth" required>
             		
         		<div style="display: inline-grid">
