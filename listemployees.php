@@ -86,15 +86,6 @@
 require_once('connection.php');
 
 // Show all employees
-$stmt=$conn->prepare("SELECT UserID FROM Users WHERE userID = :emp AND (User_Type = 'Veterinarian' OR User_Type = 'SolarPowerComp' OR User_Type = 'WindPowerComp')");
-$stmt->bindParam(":empID", "$_SESSION[User_ID]");
-$stmt->execute();
-$admin = $stmt->fetch();
-
-if(is_array($admin)){}
-else{
-    
-}
 
 $stmt = $conn->prepare("SELECT Employee_ID, First_Name, Last_Name FROM Employee ORDER BY First_Name, Last_Name");
 $stmt->execute();
