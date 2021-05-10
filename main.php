@@ -106,7 +106,7 @@
         		<input type="text" value="start_time" placeholder="start time" required>
         		
         		<div style="display: inline-block">
-            		<button onclick="closeAppointmentPopup()">Cancel</button>
+            		<button type="button" onclick="closeAppointmentPopup()">Cancel</button>
             		<button type="submit">Create Appointment</button>
         		</div>
         		
