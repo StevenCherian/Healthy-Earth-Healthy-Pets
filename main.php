@@ -92,12 +92,11 @@
 	
 	<body>
 		<form method="post" action="submitappointment.php">
-		<div id="createAppointmentPopup" style="width:85%; max-width:500px; z-index:100; display:none;">
-		
-    		<input value="start_time" placeholder="start time">
-    		
-    		<button type="submit">Create Appointment</button>
-		</div>
+    		<div id="createAppointmentPopup" style="width:85%; max-width:500px; z-index:100; display:none; padding-top:65px;">
+        		<input value="start_time" placeholder="start time">
+        		
+        		<button type="submit">Create Appointment</button>
+    		</div>
 		</form>
         <div class="header">
           <a href="#default" class="logo">Healthy Earth, Healthy Pets</a>
@@ -109,8 +108,7 @@
           </div>
         </div>
     	
-    	<div class="main-container">
-        	<form method="post">	 
+    	<div class="main-container">	 
         		<div class ="welcome" id="log">
         			<h3><strong>Welcome to Healthy Earth, Healthy Pets!</strong></h3>        			
                 </div>
@@ -120,7 +118,6 @@
     		    <div style="display: inline-grid;margin: 3% auto auto auto; grid-row-gap: 7px;">
     				<button onclick="openAppointmentPopup()">Schedule an appointment</button>
     			</div>
-        	</form>
 		</div>
 		<script>
 			function openAppointmentPopup() {
