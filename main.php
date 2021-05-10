@@ -92,7 +92,7 @@
 	 	         border-radius: 20px;
 	 	         margin: auto; left: 0;
 	 	         right: 0; 
-	 	         background-color: black;
+	 	         background-color: #333333;
 	 	         margin-top: 65px;
 	 	         position: absolute;
 	 	     }
@@ -106,7 +106,7 @@
         		<input type="text" value="start_time" placeholder="start time" required>
         		
         		<div style="display: inline-block">
-            		<button onclick="closeAppointmentPopup">Cancel</button>
+            		<button onclick="closeAppointmentPopup()">Cancel</button>
             		<button type="submit">Create Appointment</button>
         		</div>
         		
