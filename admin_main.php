@@ -1,19 +1,5 @@
 <!DOCTYPE html>
 
-<?php 
-$specific = array("id" => 102);
-
-if (!in_array($_SESSION['UserID'], $specific)) {
-    header("Location: admin_main.php");
-    
-} else {
-    header("Location: notauthorized.php");
-    exit();
-}
-
-?>
-
-
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
