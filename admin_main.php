@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php 
-$specific = array("id" => 100);
+$specific = array("id" => 102);
 
 if (!in_array($_SESSION['user_ID'], $specific)) {
     header("Location: notauthorized.php");
