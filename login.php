@@ -31,7 +31,7 @@
               text-align: center;
             }
             
-            .sign-ing-info {
+            .sign-in-info {
                 text-align: center;
             }
 	 	 
