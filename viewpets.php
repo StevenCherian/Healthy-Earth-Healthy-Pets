@@ -88,7 +88,8 @@ require_once('connection.php');
 if (!isset($_GET['Pet_ID']) && $_SERVER['REQUEST_METHOD'] != 'POST') {
     
     // Retrieve list of employees
-    $stmt = $conn->prepare("SELECT Pet_ID, Pet_Name FROM Pet ORDER BY Pet_Name");
+    $stmt = $conn->prepare("SELECT Pet_ID, Pet_Name FROM Pet WHERE UserID=:UserID ORDER BY Pet_Name");
+    $stmt->bindValue(':UserID', $_SESSION['user_ID']);
     $stmt->execute();
     
     echo "<form method='get'>";
