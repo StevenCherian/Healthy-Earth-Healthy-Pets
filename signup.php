@@ -20,7 +20,7 @@ try {
 
 try {
     // If the user_ID session is not set, then the user has not logged in yet
-    if (!isset($_SESSION['user_ID'])) {
+    if (isset($_SESSION['user_ID'])) {
         
         $stmt = $conn->prepare("SELECT Email_Address FROM Users WHERE Email_Address=:Email_Address");
         $stmt->bindValue(':Email_Address', $_POST['Email_Address']);
