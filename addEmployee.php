@@ -115,10 +115,10 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     echo "<tr><td>Password</td><td><input name='User_Password' type='text' maxlength='100' size='100'></td></tr>";
     echo "<tr><td>Home Address</td><td><input name='Home_Address' type='text' maxlength='40' size='40'></td></tr>";
     echo "<tr><td>Phone Number</td><td><input name='Phone_Number' type='text' maxlength='13' size='13'></td></tr>";
-    echo "<tr><td>Weekly Hours</td><td><input name='Weekly_Hours' type='number' maxlength='3' size='3'></td></tr>";
+    echo "<tr><td>Weekly Hours</td><td><input name='Weekly_Hours' type='number' min='0' max='99' size='3'></td></tr>";
     echo "<tr><td>Clock-In Time</td><td><input name='Clock_In_Time' type='text' maxlength='10' size='10'></td></tr>";
     echo "<tr><td>Clock-Out Time</td><td><input name='Clock_Out_Time' type='text' maxlength='10' size='10'></td></tr>";
-    echo "<tr><td>Salary</td><td><input name='Salary' type='text' pattern='\d*' maxlength='8' size='8'></td></tr>";
+    echo "<tr><td>Salary</td><td><input name='Salary' type='number' min='0' max='10000000' size='8'></td></tr>";
     echo "<tr><td>Store ID</td><td>";
     
    
