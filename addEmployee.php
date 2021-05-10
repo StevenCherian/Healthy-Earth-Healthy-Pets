@@ -100,7 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     
     echo "<select name='User_Type'>";
     
-    echo "<option value='-1'>Employee Must Have Type</option>";
+    echo "<option value='-1'>Emplyee Type Required</option>";
     
     while ($row = $stmt->fetch()) {
         echo "<option value='$row[User_Type]'>$row[User_Type]</option>";
@@ -128,7 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     
     echo "<select name='ID'>";
     
-    echo "<option value='-1'>Employee Must Have Store ID</option>";
+    echo "<option value='-1'>Store ID Required</option>";
     
     while ($row = $stmt->fetch()) {
         echo "<option value='$row[ID]'>$row[ID]</option>";
