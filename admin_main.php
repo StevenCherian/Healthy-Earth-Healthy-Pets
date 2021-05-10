@@ -1,5 +1,14 @@
 <!DOCTYPE html>
+<?php
+$stmt=$conn->prepare("SELECT UserID FROM Users WHERE userID = :emp AND (User_Type = 'Veterinarian' OR User_Type = 'SolarPowerComp' OR User_Type = 'WindPowerComp')");
+$stmt->bindParam(":empID", "$_SESSION[User_ID]");
+$stmt->execute();
+$admin = $stmt->fetch();
 
+if(!is_array($admin)){
+    header("Location: notauthorized.php");
+}
+?>
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
