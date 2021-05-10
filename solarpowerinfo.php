@@ -93,13 +93,13 @@
         			<h3><strong>Enter your Solar Power Information</strong></h3>
         			
         			<label for="SolarGrid#"><b>Solar Grid #:</b></label>
-        			<input type="SolarGrid#" placeholder="Solar Grid #" name="Solar_Grid_ID" required>
+        			<input type="SolarGrid#" maxlength="3" placeholder="Solar Grid #" name="Solar_Grid_ID" required>
         			
         			<label for="Grid Energy Consumption"><b>Grid Energy Consumption:</b></label>
-        			<input type="Grid Energy Consumption" placeholder="Grid Energy Consumption" name="Grid_Energy_Consumption" required>
+        			<input type="Grid Energy Consumption" maxlength="10" placeholder="Grid Energy Consumption" name="Grid_Energy_Consumption" required>
                     
                     <label for="Month"><b>For the month of:</b></label>
-        			<input type="Month" placeholder="Month" name="MonthYearName" required>
+        			<input type="Month" maxlength="50" placeholder="Month" name="MonthYearName" required>
         			
         			<div style="display: inline-grid;margin: 3% auto auto auto;">
         				<button type="submit">Submit</button>

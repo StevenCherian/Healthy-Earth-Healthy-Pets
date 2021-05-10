@@ -64,16 +64,16 @@
         			<h2><strong>Create an account</strong></h2>
         			
         			<label for="first_name"><b>First Name:</b></label>
-        			<input type="text" placeholder="First Name" name="First_Name" required>
+        			<input type="text" maxlength="25" placeholder="First Name" name="First_Name" required>
         			
         			<label for="last_name"><b>Last Name:</b></label>
-        			<input type="text" placeholder="Last Name" name="Last_Name" required>
+        			<input type="text" maxlength="25" placeholder="Last Name" name="Last_Name" required>
         			
         			<label for="email"><b>Email:</b></label>
-        			<input type="text" placeholder="Email" name="Email_Address" required>
+        			<input type="text" maxlength="50" placeholder="Email" name="Email_Address" required>
         			
         			<label for="password"><b>Password:</b></label>
-        			<input type="text" placeholder="Password" name="User_Password" required>
+        			<input type="text" maxlength="100" placeholder="Password" name="User_Password" required>
         			
         			<div style="display: inline-grid;margin: 3% auto auto auto;grid-row-gap: 7px;">
         				<button type="submit">Create Account</button>

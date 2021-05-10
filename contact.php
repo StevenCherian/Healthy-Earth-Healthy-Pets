@@ -82,9 +82,7 @@
         </div>
     	
     	<div class="main-container">
-        	<form method="post">	 
-
-        	</form>
+        	<h4>Come visit us!<br>We are located at 12000 West Broad St, Richmond, VA<br><br>Or give us a call at (804)-804-8404</h4>
 		</div>
 	</body>
 </html>

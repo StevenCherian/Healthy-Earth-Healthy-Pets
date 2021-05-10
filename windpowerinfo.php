@@ -97,13 +97,13 @@
         			<h3><strong>Enter your Wind Power Information</strong></h3>
         			
         			<label for="TurbineGrid#"><b>Turbine Grid #:</b></label>
-        			<input type="TurbineGrid#" placeholder="Turbine Grid #" name="Turbine_Grid_ID" required>
+        			<input type="TurbineGrid#" maxlength="3" placeholder="Turbine Grid #" name="Turbine_Grid_ID" required>
         			
         			<label for="Grid Energy Consumption"><b>Grid Energy Consumption:</b></label>
-        			<input type="Grid Energy Consumption" placeholder="Grid Energy Consumption" name="Turbine_Energy_Consumption" required>
+        			<input type="Grid Energy Consumption" maxlength="10" placeholder="Grid Energy Consumption" name="Turbine_Energy_Consumption" required>
                     
                     <label for="Month"><b>For the month of:</b></label>
-        			<input type="Month" placeholder="Month" name="MonthYearName" required>
+        			<input type="Month" maxlength="50" placeholder="Month" name="MonthYearName" required>
         			
         			<div style="display: inline-grid;margin: 3% auto auto auto;">
         				<button type="submit">Submit</button>
