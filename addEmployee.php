@@ -109,16 +109,16 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     echo "</select>";
     echo "</td></tr>";
     
-    echo "<tr><td>First name</td><td><input name='First_Name' type='text' size='10'></td></tr>";
-    echo "<tr><td>Last name</td><td><input name='Last_Name' type='text' size='10'></td></tr>";
-    echo "<tr><td>Email</td><td><input name='Email_Address' type='email' size='40'></td></tr>";
-    echo "<tr><td>Password</td><td><input name='User_Password' type='text' size='100'></td></tr>";
-    echo "<tr><td>Home Address</td><td><input name='Home_Address' type='text' size='40'></td></tr>";
-    echo "<tr><td>Phone Number</td><td><input name='Phone_Number' type='text' size='13'></td></tr>";
-    echo "<tr><td>Weekly Hours</td><td><input name='Weekly_Hours' type='number' size='3'></td></tr>";
-    echo "<tr><td>Clock-In Time</td><td><input name='Clock_In_Time' type='text' size='10'></td></tr>";
-    echo "<tr><td>Clock-Out Time</td><td><input name='Clock_Out_Time' type='text' size='10'></td></tr>";
-    echo "<tr><td>Salary</td><td><input name='Salary' type='number' min='0.01' step='0.01' size='8'></td></tr>";
+    echo "<tr><td>First name</td><td><input name='First_Name' type='text' maxlength='10' size='10'></td></tr>";
+    echo "<tr><td>Last name</td><td><input name='Last_Name' type='text' maxlength='10' size='10'></td></tr>";
+    echo "<tr><td>Email</td><td><input name='Email_Address' type='email' maxlength='40' size='40'></td></tr>";
+    echo "<tr><td>Password</td><td><input name='User_Password' type='text' maxlength='100' size='100'></td></tr>";
+    echo "<tr><td>Home Address</td><td><input name='Home_Address' type='text' maxlength='40' size='40'></td></tr>";
+    echo "<tr><td>Phone Number</td><td><input name='Phone_Number' type='text' maxlength='13' size='13'></td></tr>";
+    echo "<tr><td>Weekly Hours</td><td><input name='Weekly_Hours' type='number' maxlength='3' size='3'></td></tr>";
+    echo "<tr><td>Clock-In Time</td><td><input name='Clock_In_Time' type='text' maxlength='10' size='10'></td></tr>";
+    echo "<tr><td>Clock-Out Time</td><td><input name='Clock_Out_Time' type='text' maxlength='10' size='10'></td></tr>";
+    echo "<tr><td>Salary</td><td><input name='Salary' type='number' min='0.01' step='0.01' maxlength='8' size='8'></td></tr>";
     echo "<tr><td>Store ID</td><td>";
     
    
