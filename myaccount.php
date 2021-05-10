@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 
-<?php session_start(); ?>
 <?php require_once ('connection.php');?>
-
 
 <html>
 	<head>
@@ -24,6 +22,16 @@
             @keyframes fadeInAnimation {
                 0% { opacity: 0; }
                 100% { opacity: 1; }
+            }
+            
+            .button {
+              background-color: #2a9d8f;
+              color: white;
+              padding: 10px 25px;
+              margin: 0 auto;
+              border: 2px solid #404041;
+              border-radius: 14px;
+              cursor: pointer;
             }
            
             .header {
@@ -71,7 +79,7 @@
             }
             
             .welcome {
-            	text-align: left;
+            	text-align: center;
             }
 	 	 
         </style>
@@ -91,15 +99,17 @@
     	
     	<div class="main-container">
     		<div class="welcome">
-    			<?php 
-                if(isset($_SESSION['UserID'])){
-                    echo "Welcome '{$_SESSION['UserID']}'";
-                }
-                ?>php
+    			<h4>Welcome</h4>
             </div>
-        	<form method="post">	 
-
-        	</form>
+			
+            <div class="buttonSelections">                
+                <div style="display: inline-grid; margin: 3% auto auto auto; grid-row-gap: 7px;">
+    				<a class="button" href="viewpets.php">View or edit your pets</a>
+                    <a class="button" href="#">View or edit your appointments</a>
+                    
+    			</div>
+            </div>
+            
 		</div>
 	</body>
 </html>
