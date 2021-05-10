@@ -1,16 +1,5 @@
 <!DOCTYPE html>
 
-<?php 
-$specific = array("id" => 100);
-
-if (!in_array($_SESSION['user_ID'], $specific)) {
-    header("Location: notauthorized.php");
-    exit();
-}
-
-?>
-
-
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -66,14 +55,13 @@ if (!in_array($_SESSION['user_ID'], $specific)) {
               padding-right: 12px;
             }       
 
-            .main-container {
+            .not-authorized {
                 padding: 25px;
                 width: 95%;
                 margin: auto;
                 display: grid;
                 overflow: auto;
                 background-color: #f2f2f2;
-                color: #000000;
                 text-align: center;
             }
 	 	 
@@ -85,22 +73,13 @@ if (!in_array($_SESSION['user_ID'], $specific)) {
         <div class="header">
           <a href="#default" class="logo">Healthy Earth, Healthy Pets</a>
           <div class="header-right">
-            <a href="logout.php">Logout</a>
+            <a href="login.php">Go back</a>
           </div>
         </div>
     	
-    	<div class="main-container">
-    		<ul class="actions" style=list-style-type:none>
-	            <li><a href="listemployees.php">List all employees</a></li>
-	            <li><a href="listemployeeinfo.php">List information for an employee</a></li>
-                <li><a href="listpowercompanyinfo.php">List information for power companies</a></li>
-                <li><a href="editpowercompanyinfo.php">Edit information a power company</a>
-	            <li><a href="addEmployee.php">Add an employee</a></li>
-	            <li><a href="editEmployee.php">Edit an employee</a></li>
-            </ul>
-        	<form method="post">	 
-
-        	</form>
-		</div>
+    	<div class="not-authorized">
+    		<h1 style="color:red;">You are not authorized to view this page. Please login with correct credentials.</h1>
+    	</div>
+    	
 	</body>
 </html>
