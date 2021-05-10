@@ -34,7 +34,7 @@ try {
             exit();
         
         } else {
-            $name="Patient";
+            $name='Patient';
             $stmt = $conn->prepare("INSERT INTO Users VALUES (:User_Type, :First_Name, :Last_Name, :Email_Address, :User_Password)");
             $password = password_hash($_POST['User_Password'], PASSWORD_BCRYPT);
             
