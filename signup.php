@@ -49,6 +49,9 @@ try {
             $stmt2->execute();
             
             $queryResult = $stmt2->fetch();
+            foreach($queryResult as $value){
+                echo $value;
+            }
             session_start();
             $_SESSION['user_ID'] = $queryResult['UserID'];
             header("Location: main.php");
