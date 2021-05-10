@@ -103,7 +103,10 @@
 	<body>
 		<form method="post" action="submitappointment.php">
     		<div id="createAppointmentPopup" style="width:85%; max-width:500px; z-index:100; padding:25px">
-        		<input type="text" value="start_time" placeholder="start time" required>
+        		<input type="text" maxlength="100" value="apptrsn" placeholder="Appointment Reason" required>
+        		<input type="time" value="checkintime" min="09:00" max="18:00" placeholder="Check-In Time" required>
+        		<input type="date" value="checkindate" placeholder="Check-In Date" required>
+        		
         		
         		<div style="display: inline-block">
             		<button type="button" onclick="closeAppointmentPopup()">Cancel</button>
