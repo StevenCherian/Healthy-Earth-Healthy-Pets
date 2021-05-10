@@ -91,7 +91,14 @@
 	</head>
 	
 	<body>
-	
+		<form method="post" action="submitappointment.php">
+		<div id="createAppointmentPopup" style="width:85%; max-width:500px; z-index:100; display:none;">
+		
+    		<input value="start_time" placeholder="start time">
+    		
+    		<button type="submit">Create Appointment</button>
+		</div>
+		</form>
         <div class="header">
           <a href="#default" class="logo">Healthy Earth, Healthy Pets</a>
           <div class="header-right">
@@ -111,11 +118,18 @@
                 <h4>We aim to provide quality care to your pets!<br>Contact us or create an account and schedule an appointment to get started.</h4>       			
         			
     		    <div style="display: inline-grid;margin: 3% auto auto auto; grid-row-gap: 7px;">
-    				<button type="submit">Schedule an appointment</button>
-    				<button type="submit">Create an account</button>
+    				<button onclick="openAppointmentPopup()">Schedule an appointment</button>
     			</div>
         	</form>
 		</div>
-		
+		<script>
+			function openAppointmentPopup() {
+				document.findElementByID("createAppointmentPopup").style.display="grid";
+			}
+			
+			function openAppointmentPopup() {
+				document.findElementByID("createAppointmentPopup").style.display="none";
+			}			
+		</script>
 	</body>
 </html>
