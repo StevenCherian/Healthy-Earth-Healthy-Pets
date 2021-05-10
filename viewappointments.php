@@ -89,10 +89,8 @@ if (!isset($_GET['Appointment_ID']) && $_SERVER['REQUEST_METHOD'] != 'POST') {
     
     // Retrieve list of employees
     $stmt = $conn->prepare("SELECT Appointment_ID, Appointment_Reason FROM Appointment WHERE UserID=:UserID ORDER BY Appointment_Reason");
-    $stmt->bindValue(':UserID', $_SESSION['user_ID']);
+    $stmt->bindValue(':UserID', $_SESSION['user_ID']); 
     $stmt->execute();
-    
-    echo $_SESSION['user_ID'];
     
     echo "<form method='get'>";
     echo "<select name='Appointment_ID' onchange='this.form.submit();'>";
