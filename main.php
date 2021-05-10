@@ -127,7 +127,7 @@
            		<label for="checkindate">Check-In Date</label>
             		<input type="date" name="checkindate" placeholder="Check-In Date" required>
             		
-        		<div style="display: inline-block">
+        		<div style="display: inline-grid">
             		<button type="button" onclick="closeAppointmentPopup()">Cancel</button>
             		<button type="submit">Create Appointment</button>
         		</div>
@@ -139,15 +139,15 @@
     		<div id="createPetEntryPopup" style="width:85%; max-width:500px; z-index:100; padding:25px">
         		
         		<label for="petname">Pet Name</label>
-            		<input type="text" name="apptrsn" maxlength="15" placeholder="Pet name" required>
+            		<input type="text" name="petname" maxlength="15" placeholder="Pet name" required>
             	
             	<label for="species">Species</label>
-            		<input type="text" name="spcs" maxlength="30" placeholder="Species" required>
+            		<input type="text" name="species" maxlength="30" placeholder="Species" required>
            		
            		<label for="birthdate">Date of Birth</label>
             		<input type="date" name="birthdate" placeholder="Date of Birth" required>
             		
-        		<div style="display: inline-block">
+        		<div style="display: inline-grid">
             		<button type="button" onclick="closePetEntryPopup()">Cancel</button>
             		<button type="submit">Create Appointment</button>
         		</div>
