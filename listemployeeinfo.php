@@ -95,6 +95,7 @@ if (!isset($_GET['Employee_ID'])) {
     
     echo "<form method='get'>";
     echo "<select name='Employee_ID' onchange='this.form.submit();'>";
+    echo "<option value='None'></option>";
     
     while ($row = $stmt->fetch()) {
         echo "<option value='$row[Employee_ID]'>$row[First_Name] $row[Last_Name]</option>";

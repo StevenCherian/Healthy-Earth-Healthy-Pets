@@ -93,6 +93,7 @@ if (!isset($_GET['Company_ID']) && $_SERVER['REQUEST_METHOD'] != 'POST') {
     
     echo "<form method='get'>";
     echo "<select name='Company_ID' onchange='this.form.submit();'>";
+    echo "<option value='None'></option>";
     
     while ($row = $stmt->fetch()) {
         echo "<option value='$row[Company_ID]'>$row[Company_Name]</option>";
