@@ -156,10 +156,11 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     try {
         $stmt = $conn->prepare("UPDATE Users SET First_Name=:First_Name, Last_Name=:Last_Name, 
                                 User_Password=:User_Password WHERE UserID=:UserID");
+        $password = password_hash($_POST['User_Password'], PASSWORD_BCRYPT);
         
         $stmt->bindValue(':First_Name', $_POST['First_Name']);
         $stmt->bindValue(':Last_Name', $_POST['Last_Name']);
-        $stmt->bindValue(':User_Password', $_POST['User_Password']);
+        $stmt->bindValue(':User_Password', $password);
         $stmt->bindValue(':UserID', $_SESSION["editUsers_UserID"]);
         
         $stmt->execute();
