@@ -121,7 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     $stmt0->execute();
     $row0 = $stmt0->fetch();
     
-    $stmt1=$conn->prepare("SELECT Users.UserID, Pet.UserID FROM Users JOIN Pet WHERE Users.UserID = :empID AND Pet.UserID = :empID;");
+    $stmt1=$conn->prepare("SELECT Users.UserID FROM Users JOIN Pet WHERE Users.UserID = :empID AND Pet.UserID = :empID LIMIT 1;");
     $stmt1->bindParam(":empID", $_SESSION['user_ID']);
     $stmt1->execute();
     $admin = $stmt1->fetch();
