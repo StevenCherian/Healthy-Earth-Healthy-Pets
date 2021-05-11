@@ -116,21 +116,24 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     
     $Pet_ID = $_GET["Pet_ID"];
     
+    $stmt0 = $conn->prepare("SELECT UserID FROM Pet WHERE Pet_ID=:Pet_ID");
+    $stmt0->bindValue(':Pet_ID', $Pet_ID);
+    $stmt0->execute();
+    $row0 = $stmt->fetch();
+    
     $stmt1=$conn->prepare("SELECT Users.UserID, Pet.UserID FROM Users JOIN Pet WHERE Users.UserID = :empID AND Pet.UserID = :empID;");
     $stmt1->bindParam(":empID", $_SESSION['user_ID']);
     $stmt1->execute();
     $admin = $stmt1->fetch();
     
-    if($Pet_ID != $admin){
+    if($row0 != $admin){
         header("Location: notauthorized.php");
     }
     
     $stmt = $conn->prepare("SELECT Pet_ID, Pet_Name, Species, Birthdate
                             FROM Pet WHERE Pet_ID=:Pet_ID");
     $stmt->bindValue(':Pet_ID', $Pet_ID);
-    
     $stmt->execute();
-    
     $row = $stmt->fetch();
     
     echo "<form method='post' action='viewpets.php'>";
