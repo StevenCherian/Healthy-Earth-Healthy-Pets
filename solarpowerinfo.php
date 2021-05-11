@@ -25,7 +25,7 @@
             
             .header {
               overflow: hidden;
-              background-color: #404040;
+              background-color: #333333;
               padding: 5px 1px;
             }
 
