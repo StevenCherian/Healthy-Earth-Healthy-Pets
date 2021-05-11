@@ -85,6 +85,33 @@
 
 require_once('connection.php');
 
+if (!isset($_GET['UserID']) && $_SERVER['REQUEST_METHOD'] != 'POST') {
+    
+    // Retrieve list of employees
+    $stmt = $conn->prepare("SELECT UserID, First_Name FROM Users WHERE UserID=:UserID ORDER BY First_Name");
+    $stmt->bindValue(':UserID', $_SESSION['user_ID']);
+    $stmt->execute();
+    
+    //echo "<form method='get'>";
+    //echo "<select name='Appointment_ID' onchange='this.form.submit();'>";
+    
+    echo "<form method='get'>";
+    echo "<div style='width: 100%; padding-top: 10%; display: grid; justify-content: center'>";
+    echo "<h4>Choose an account to view</h4>";
+    echo "<select style='color: black; padding: 5px 30px 5px 30px' name='UserID' onchange='this.form.submit();'>";
+    echo "</div>";
+    
+    echo "<option value='None'></option>";
+    
+    while ($row = $stmt->fetch()) {
+        echo "<option value='$row[UserID]'>$row[First_Name]</option>";
+    }
+    
+    echo "</select>";
+    echo "</form>";
+    exit();
+}
+
 if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     
     $UserID = $_GET["UserID"];
