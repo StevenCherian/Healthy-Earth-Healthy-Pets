@@ -32,6 +32,7 @@
               border: 2px solid #404041;
               border-radius: 14px;
               cursor: pointer;
+              text-decoration-line: inherit;
             }
            
             .header {

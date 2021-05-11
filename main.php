@@ -127,9 +127,9 @@
            		<label for="checkindate">Check-In Date</label>
             		<input type="date" name="checkindate" placeholder="Check-In Date" required>
             		
-        		<div style="display: inline-grid">
+        		<div style="display: inline-block; margin:auto;">
             		<button type="button" onclick="closeAppointmentPopup()">Cancel</button>
-            		<button type="submit">Create Appointment</button>
+            		<button type="submit">Create</button>
         		</div>
         		
     		</div>
@@ -147,7 +147,7 @@
            		<label for="birthdate">Pet Date of Birth</label>
             		<input type="date" name="birthdate" placeholder="Date of Birth" required>
             		
-        		<div style="display: inline-grid">
+        		<div style="display: inline-block; margin:auto;">
             		<button type="button" onclick="closePetEntryPopup()">Cancel</button>
             		<button type="submit">Submit</button>
         		</div>
