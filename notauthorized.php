@@ -73,7 +73,7 @@
         <div class="header">
           <a href="#default" class="logo">Healthy Earth, Healthy Pets</a>
           <div class="header-right">
-            <a href="login.php">Go back</a>
+            <a href="logout.php">Go back</a>
           </div>
         </div>
     	
