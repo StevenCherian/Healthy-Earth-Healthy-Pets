@@ -38,7 +38,7 @@ try {
             $stmt = $conn->prepare("INSERT INTO Users VALUES (:User_Type, :First_Name, :Last_Name, :Email_Address, :User_Password)");
             $password = password_hash($_POST['User_Password'], PASSWORD_BCRYPT);
             
-            $stmt->bindParam(":User_Type", $name, PDO::PARAM_STR);
+            $stmt->bindParam(":User_Type", $name);
             $stmt->bindParam(":First_Name", $_POST['First_Name']);
             $stmt->bindParam(":Last_Name", $_POST['Last_Name']);
             $stmt->bindParam(":Email_Address", $_POST['Email_Address']);
@@ -50,9 +50,7 @@ try {
             $stmt2->execute();
             
             $queryResult = $stmt2->fetch();
-            foreach($queryResult as $value){
-                echo $value;
-            }
+
             session_start();
             $_SESSION['user_ID'] = $queryResult['UserID'];
             header("Location: main.php");
