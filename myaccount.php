@@ -105,6 +105,7 @@
 			
             <div class="buttonSelections">                
                 <div style="display: inline-grid; margin: 3% auto auto auto; grid-row-gap: 7px;">
+    				<a class="button" href="viewaccount.php">View or edit your account</a>
     				<a class="button" href="viewpets.php">View or edit your pets</a>
                     <a class="button" href="viewappointments.php">View or edit your appointments</a>
                     
