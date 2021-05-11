@@ -116,6 +116,20 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     
     $Appointment_ID = $_GET["Appointment_ID"];
     
+    $stmt0 = $conn->prepare("SELECT UserID FROM Appointment WHERE Appointment_ID=:Appointment_ID");
+    $stmt0->bindValue(':Appointment_ID', $Appointment_ID);
+    $stmt0->execute();
+    $row0 = $stmt0->fetch();
+    
+    $stmt1=$conn->prepare("SELECT Users.UserID FROM Users JOIN Appointment WHERE Users.UserID = :empID AND Appointment.UserID = :empID LIMIT 1;");
+    $stmt1->bindParam(":empID", $_SESSION['user_ID']);
+    $stmt1->execute();
+    $admin = $stmt1->fetch();
+    
+    if($row0 != $admin){
+        header("Location: notauthorized.php");
+    }
+    
     $stmt = $conn->prepare("SELECT Appointment_ID, Appointment_Reason, Check_In_Time, Check_In_Date
                             FROM Appointment WHERE Appointment_ID=:Appointment_ID");
     $stmt->bindValue(':Appointment_ID', $Appointment_ID);
