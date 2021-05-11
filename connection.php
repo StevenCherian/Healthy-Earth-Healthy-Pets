@@ -45,6 +45,13 @@ if (!isset($_SESSION['user_ID']))
                     // Redirect to URL
                     header("Location: admin_main.php");
                 }
+                
+                if($value == "Receptionist") {
+                    $_SESSION['user_ID'] = $queryResult['UserID'];
+                    
+                    // Redirect to URL
+                    header("Location: receptionistportal.php");
+                }
                     
                 if($value == "SolarPowerComp") {
                     $_SESSION['user_ID'] = $queryResult['UserID'];
