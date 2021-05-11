@@ -78,8 +78,8 @@
           </div>
         </div>
         
-        <h3><strong>For privilege testing purposes, enter ID in URL as 3000 to view
-       	<br>your other entry. Enter 3001 to see what happens when it is not your own entry.</strong></h3>
+        <h3><strong>For privilege testing purposes, enter ID in URL as 6000 to view
+       	<br>your other entry. Enter 6001 to see what happens when it is not your own entry.</strong></h3>
     	
 	</body>
 </html>
