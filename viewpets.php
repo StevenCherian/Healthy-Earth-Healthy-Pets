@@ -119,7 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     $stmt0 = $conn->prepare("SELECT UserID FROM Pet WHERE Pet_ID=:Pet_ID");
     $stmt0->bindValue(':Pet_ID', $Pet_ID);
     $stmt0->execute();
-    $row0 = $stmt->fetch();
+    $row0 = $stmt0->fetch();
     
     $stmt1=$conn->prepare("SELECT Users.UserID, Pet.UserID FROM Users JOIN Pet WHERE Users.UserID = :empID AND Pet.UserID = :empID;");
     $stmt1->bindParam(":empID", $_SESSION['user_ID']);
