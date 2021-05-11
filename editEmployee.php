@@ -92,8 +92,13 @@ if (!isset($_GET['Employee_ID']) && $_SERVER['REQUEST_METHOD'] != 'POST') {
     $stmt->execute();
     
     echo "<form method='get'>";
-    echo "<select style='margin: auto; left: 0; right: 0; padding: 5px 30px 5px 30px' name='Employee_ID' onchange='this.form.submit();'>";
-    echo "<option value='None'></option>";
+    
+    echo "<div style='width: 100%; padding-top: 10%; display: flex; justify-content: center'>";
+    echo "<select style='color: black; padding: 5px 30px 5px 30px' name='Employee_ID' onchange='this.form.submit();'>";
+    echo "</div>";
+    
+  //  echo "<select style='margin: auto; left: 0; right: 0; padding: 5px 30px 5px 30px' name='Employee_ID' onchange='this.form.submit();'>";
+    echo "<option value='None'>Choose Employee</option>";
     
     while ($row = $stmt->fetch()) {
         echo "<option value='$row[Employee_ID]'>$row[First_Name] $row[Last_Name]</option>";
