@@ -138,7 +138,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     
     $row = $stmt->fetch();
     
-    echo "<form method='post' action='viewappointments.php'>";
+    echo "<form method='post' action='viewaccount.php'>";
     echo "<table style='border: solid 1px black;'>";
     echo "<tbody>";
     echo "<tr><td>First Name</td><td><input name='First_Name' type='text' maxlength='25' size='25' value='$row[First_Name]'></td></tr>";
