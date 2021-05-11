@@ -93,9 +93,16 @@ if (!isset($_GET['Employee_ID'])) {
     $stmt = $conn->prepare("SELECT Employee_ID, First_Name, Last_Name FROM Employee ORDER BY First_Name, Last_Name");
     $stmt->execute();
     
+//     echo "<form method='get'>";
+//     echo "<select name='Employee_ID' onchange='this.form.submit();'>";
+    
     echo "<form method='get'>";
-    echo "<select name='Employee_ID' onchange='this.form.submit();'>";
-    echo "<option value='None'></option>";
+    echo "<div style='width: 100%; padding-top: 10%; display: grid; justify-content: center'>";
+    echo "<h4>Choose an employee to edit</h4>";
+    echo "<select style='color: black; padding: 5px 30px 5px 30px' name='Employee_ID' onchange='this.form.submit();'>";
+    echo "</div>";
+    
+    echo "<option value='None'>Choose Employee</option>";
     
     while ($row = $stmt->fetch()) {
         echo "<option value='$row[Employee_ID]'>$row[First_Name] $row[Last_Name]</option>";
