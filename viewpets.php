@@ -116,6 +116,15 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     
     $Pet_ID = $_GET["Pet_ID"];
     
+    $stmt1=$conn->prepare("SELECT Users.UserID, Pet.UserID FROM Users JOIN Pet WHERE Users.UserID = :empID AND Pet.UserID = :empID;");
+    $stmt1->bindParam(":empID", $_SESSION['user_ID']);
+    $stmt1->execute();
+    $admin = $stmt1->fetch();
+    
+    if($Pet_ID != $admin){
+        header("Location: notauthorized.php");
+    }
+    
     $stmt = $conn->prepare("SELECT Pet_ID, Pet_Name, Species, Birthdate
                             FROM Pet WHERE Pet_ID=:Pet_ID");
     $stmt->bindValue(':Pet_ID', $Pet_ID);
