@@ -92,8 +92,15 @@ if (!isset($_GET['Appointment_ID']) && $_SERVER['REQUEST_METHOD'] != 'POST') {
     $stmt->bindValue(':UserID', $_SESSION['user_ID']); 
     $stmt->execute();
     
+    //echo "<form method='get'>";
+    //echo "<select name='Appointment_ID' onchange='this.form.submit();'>";
+    
     echo "<form method='get'>";
-    echo "<select name='Appointment_ID' onchange='this.form.submit();'>";
+    echo "<div style='width: 100%; padding-top: 10%; display: grid; justify-content: center'>";
+    echo "<h4>Choose an employee to edit</h4>";
+    echo "<select style='color: black; padding: 5px 30px 5px 30px' name='Appointment_ID' onchange='this.form.submit();'>";
+    echo "</div>";
+    
     echo "<option value='None'></option>";
     
     while ($row = $stmt->fetch()) {
