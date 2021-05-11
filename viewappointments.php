@@ -97,7 +97,7 @@ if (!isset($_GET['Appointment_ID']) && $_SERVER['REQUEST_METHOD'] != 'POST') {
     
     echo "<form method='get'>";
     echo "<div style='width: 100%; padding-top: 10%; display: grid; justify-content: center'>";
-    echo "<h4>Choose an employee to edit</h4>";
+    echo "<h4>Choose an appointment to view</h4>";
     echo "<select style='color: black; padding: 5px 30px 5px 30px' name='Appointment_ID' onchange='this.form.submit();'>";
     echo "</div>";
     
