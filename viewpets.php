@@ -77,6 +77,9 @@
             <a href="myaccount.php">Go back</a>
           </div>
         </div>
+        
+        <h3><strong>For privilege testing purposes, enter ID in URL to 3000 to view
+       	<br>your other entry. Enter 3001 to see what happens when it is not your own entry.</strong></h3>
     	
 	</body>
 </html>
