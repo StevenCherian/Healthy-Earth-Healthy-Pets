@@ -92,8 +92,8 @@ if (!isset($_GET['Employee_ID']) && $_SERVER['REQUEST_METHOD'] != 'POST') {
     $stmt->execute();
     
     echo "<form method='get'>";
-    echo "<h4>Choose an employee to edit</h4>";
     echo "<div style='width: 100%; padding-top: 10%; display: flex; justify-content: center'>";
+    echo "<h4>Choose an employee to edit</h4>";
     echo "<select style='color: black; padding: 5px 30px 5px 30px' name='Employee_ID' onchange='this.form.submit();'>";
     echo "</div>";
     
