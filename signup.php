@@ -51,7 +51,7 @@ try {
             
             $queryResult = $stmt2->fetch();
             foreach($queryResult as $value){
-                printf("%s \n", $value);
+                echo $value;
             }
             session_start();
             $_SESSION['user_ID'] = $queryResult['UserID'];
