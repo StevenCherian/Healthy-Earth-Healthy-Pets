@@ -91,9 +91,16 @@ if (!isset($_GET['Company_ID']) && $_SERVER['REQUEST_METHOD'] != 'POST') {
     $stmt = $conn->prepare("SELECT Company_ID, Company_Name FROM Electricity_Supplier ORDER BY Company_Name");
     $stmt->execute();
     
+    //echo "<form method='get'>";
+    //echo "<select name='Company_ID' onchange='this.form.submit();'>";
+    
     echo "<form method='get'>";
-    echo "<select name='Company_ID' onchange='this.form.submit();'>";
-    echo "<option value='None'></option>";
+    echo "<div style='width: 100%; padding-top: 10%; display: grid; justify-content: center'>";
+    echo "<h4>Choose a power company to edit</h4>";
+    echo "<select style='color: black; padding: 5px 30px 5px 30px' name='Company_ID' onchange='this.form.submit();'>";
+    echo "</div>";
+    
+    echo "<option value='None'>Choose Company</option>";
     
     while ($row = $stmt->fetch()) {
         echo "<option value='$row[Company_ID]'>$row[Company_Name]</option>";
