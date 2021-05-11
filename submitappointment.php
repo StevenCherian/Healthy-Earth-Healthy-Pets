@@ -7,7 +7,7 @@ try {
     $sqlQuery = "INSERT INTO Appointment
                      (Appointment_Reason, Check_In_Time, Check_In_Date, UserID)
                      VALUES
-                     (:apptrsn, :checkintime, :checkindate)";
+                     (:apptrsn, :checkintime, :checkindate, :UserID)";
     
     $stmt = $conn->prepare($sqlQuery);
     $stmt->bindValue(':apptrsn', $_POST["apptrsn"]);
